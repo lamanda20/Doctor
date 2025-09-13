@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["accueil", "a-propos", "services", "expertise", "gallery", "location"];
+    const sectionIds = ["accueil", "a-propos", "services", "gallery", "location"];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -54,7 +54,6 @@ const Navbar: React.FC = () => {
     { name: "Accueil", id: "accueil" },
     { name: "À Propos", id: "a-propos" },
     { name: "Services", id: "services" },
-    { name: "Expertise", id: "expertise" },
     { name: "Galerie", id: "gallery" },
     { name: "Contact & Localisation", id: "location" },
   ];

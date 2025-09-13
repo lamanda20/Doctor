@@ -4,7 +4,7 @@ import {
   Activity,
   HeartPulse,
   Baby,
-  FileText
+  FileText,
 } from "lucide-react";
 
 const Services: React.FC = () => {
@@ -64,8 +64,7 @@ const Services: React.FC = () => {
     {
       id: "grossesse",
       name: "Suivi de Grossesses",
-      description:
-        "Accompagnement médical complet pour une grossesse sereine.",
+      description: "Accompagnement médical complet pour une grossesse sereine.",
       icon: <Baby />,
       features: [
         "Consultations prénatales",
@@ -90,7 +89,10 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20">
+    <section
+      id="services"
+      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header */}
         <div className="text-center space-y-2">

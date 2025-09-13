@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="accueil"
-      className="w-full min-h-[calc(100vh-5rem)] flex items-center justify-center bg-gradient-to-br from-[#3790B4]/10 via-white to-[#6F78B9]/15 px-4 sm:px-6 lg:px-8 pt-28 pb-12 relative overflow-hidden"
+      className="w-full min-h-[calc(100vh-5rem)] flex items-center justify-center bg-gradient-to-br from-[#3790B4]/10 via-white to-[#6F78B9]/15 px-4 sm:px-6 lg:px-8 pt-24 pb-8 relative overflow-hidden"
     >
       {/* Decorative elements */}
       <div className="absolute top-10 left-10 w-20 h-20 rounded-full bg-[#3790B4]/10 blur-xl animate-pulse"></div>
@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
                 <div className="bg-[#3790B4]/10 p-1.5 rounded-full">
                   <Mail size={14} className="text-[#3790B4]" />
                 </div>
-                <span className="text-[#40338B]">elmalki.hasnaa@gmail.com</span>
+                <span className="text-[#40338B]">cmhe25@gmail.com</span>
               </div>
               <div className="flex items-start gap-2 p-2 rounded-lg hover:bg-[#3790B4]/5 transition-colors">
                 <div className="bg-[#3790B4]/10 p-1.5 rounded-full mt-0.5">
