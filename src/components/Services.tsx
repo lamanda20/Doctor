@@ -105,14 +105,14 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="w-full bg-teal-50 py-20 scroll-mt-20">
+    <section id="services" className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B]">
             Services Médicaux
           </h2>
-          <p className="text-teal-700 text-lg">
+          <p className="text-[#6F78B9] text-lg">
             Une gamme complète de soins adaptés à vos besoins
           </p>
         </div>
@@ -125,14 +125,14 @@ const Services: React.FC = () => {
               className="bg-white rounded-xl shadow-lg p-6 flex flex-col gap-4 hover:shadow-xl transition"
             >
               <div className="flex items-center gap-4">
-                <div className="bg-teal-100 text-teal-700 rounded-full p-3">
-                  {service.icon}
+                <div className="bg-[#3790B4]/20 text-[#3790B4] rounded-full p-3">
+                  {React.cloneElement(service.icon, { size: 20 })}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-teal-900">
+                  <h3 className="text-lg font-bold text-[#40338B]">
                     {service.name}
                   </h3>
-                  <div className="flex gap-4 text-sm text-teal-700 mt-1">
+                  <div className="flex gap-4 text-sm text-[#6F78B9] mt-1">
                     <span className="flex items-center gap-1">
                       <Clock size={14} /> {service.duration} min
                     </span>
@@ -143,8 +143,8 @@ const Services: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <p className="text-teal-800 text-sm">{service.description}</p>
-              <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+              <p className="text-[#40338B] text-sm">{service.description}</p>
+              <ul className="list-disc list-inside text-[#40338B] text-sm space-y-1">
                 {service.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}

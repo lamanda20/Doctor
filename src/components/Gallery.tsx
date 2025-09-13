@@ -74,7 +74,7 @@ const galleryImages: GalleryImage[] = [
     description: "Accès facilité et locaux modernes en plein Paris 14ème",
     category: "exterior",
   },
-]; 
+];
 
 const categoryLabels = {
   cabinet: "Cabinet",
@@ -93,7 +93,7 @@ const Gallery: React.FC = () => {
       : galleryImages.filter((img) => img.category === filter);
 
   return (
-    <section id="gallery" className="w-full bg-gray-50 py-24 scroll-mt-28">
+    <section id="gallery" className="w-full bg-[#3790B4]/5 py-24 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -102,11 +102,12 @@ const Gallery: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900 mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2">
             Notre Cabinet en Images
           </h2>
-          <p className="text-teal-700 text-lg">
-            Découvrez notre environnement professionnel, nos équipements modernes et notre équipe dévouée
+          <p className="text-[#6F78B9] text-lg">
+            Découvrez notre environnement professionnel, nos équipements
+            modernes et notre équipe dévouée
           </p>
         </motion.div>
 
@@ -116,22 +117,24 @@ const Gallery: React.FC = () => {
             onClick={() => setFilter("all")}
             className={`px-4 py-2 rounded-full border transition ${
               filter === "all"
-                ? "bg-teal-700 text-white"
-                : "bg-white text-teal-700 border-teal-700 hover:bg-teal-100"
+                ? "bg-[#40338B] text-white"
+                : "bg-white text-[#40338B] border-[#40338B] hover:bg-[#6F78B9]/20"
             }`}
           >
             Tout ({galleryImages.length})
           </button>
           {Object.entries(categoryLabels).map(([key, label]) => {
-            const count = galleryImages.filter((img) => img.category === key).length;
+            const count = galleryImages.filter(
+              (img) => img.category === key
+            ).length;
             return (
               <button
                 key={key}
                 onClick={() => setFilter(key)}
                 className={`px-4 py-2 rounded-full border transition ${
                   filter === key
-                    ? "bg-teal-700 text-white"
-                    : "bg-white text-teal-700 border-teal-700 hover:bg-teal-100"
+                    ? "bg-[#40338B] text-white"
+                    : "bg-white text-[#40338B] border-[#40338B] hover:bg-[#6F78B9]/20"
                 }`}
               >
                 {label} ({count})
@@ -156,7 +159,7 @@ const Gallery: React.FC = () => {
                 alt={image.title}
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-[#40338B]/50 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
                 <ZoomIn className="text-white mb-2" size={24} />
                 <h4 className="text-white font-semibold">{image.title}</h4>
                 <p className="text-white text-sm">{image.description}</p>
@@ -172,7 +175,7 @@ const Gallery: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center p-4"
+              className="fixed inset-0 bg-[#40338B]/80 z-50 flex justify-center items-center p-4"
               onClick={() => setSelectedImage(null)}
             >
               <motion.div
@@ -184,7 +187,7 @@ const Gallery: React.FC = () => {
               >
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 text-gray-700 hover:text-gray-900 transition"
+                  className="absolute top-4 right-4 text-[#40338B] hover:text-[#6F78B9] transition"
                 >
                   <X size={28} />
                 </button>
@@ -194,12 +197,16 @@ const Gallery: React.FC = () => {
                   className="w-full h-96 object-cover"
                 />
                 <div className="p-6">
-                  <div className="flex items-center gap-2 text-teal-700 mb-2">
+                  <div className="flex items-center gap-2 text-[#3790B4] mb-2">
                     <Camera size={16} />
                     <span>{categoryLabels[selectedImage.category]}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-teal-900 mb-2">{selectedImage.title}</h3>
-                  <p className="text-teal-800 text-sm">{selectedImage.description}</p>
+                  <h3 className="text-xl font-bold text-[#40338B] mb-2">
+                    {selectedImage.title}
+                  </h3>
+                  <p className="text-[#40338B] text-sm">
+                    {selectedImage.description}
+                  </p>
                 </div>
               </motion.div>
             </motion.div>
