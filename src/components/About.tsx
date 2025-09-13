@@ -1,125 +1,152 @@
-import React from 'react';
-import { GraduationCap, MapPin, Users } from 'lucide-react';
-import './About.css';
+import React from "react";
+import { GraduationCap, MapPin, Users } from "lucide-react";
 
 const About: React.FC = () => {
   return (
-    <section id="a-propos" className="about section">
-      <div className="container">
-        <div className="section-header">
-          <h2>À Propos de Dr. Hasnaa El Malki</h2>
-          <p>Votre médecin de confiance, à votre écoute depuis plus de 15 ans</p>
+    <section
+      id="a-propos"
+      className="w-full bg-white py-13 scroll-mt-28"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900 mb-2">
+            À Propos de Dr. Hasnaa El Malki
+          </h2>
+          <p className="text-teal-700 text-lg">
+            Votre médecin de confiance, à votre écoute depuis plus de 15 ans
+          </p>
         </div>
 
-        <div className="about-content">
-          <div className="about-text">
-            <div className="about-intro">
-              <h3>Votre Santé, Ma Priorité</h3>
-              <p>
-                Diplômée de la Faculté de Médecine de Paris en 2008, j'exerce 
-                la médecine générale avec passion et dévouement depuis plus de 15 ans. 
-                Dans mon cabinet moderne et chaleureux, je vous accueille avec mon équipe 
-                pour vous offrir des soins personnalisés et de qualité.
-              </p>
-              <p>
-                Mon approche se base sur l'écoute attentive, le dialogue et une prise 
-                en charge globale de votre santé. Je prends le temps nécessaire pour 
-                chaque consultation, car votre bien-être mérite toute mon attention.
-              </p>
-            </div>
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
+          {/* Left: Text & Qualifications */}
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-teal-800 mb-4">
+              Votre Santé, Ma Priorité
+            </h3>
+            <p className="text-teal-900 mb-4 leading-relaxed">
+              Diplômée de la Faculté de Médecine de Paris en 2008, j'exerce la
+              médecine générale avec passion et dévouement depuis plus de 15
+              ans. Mon cabinet moderne et chaleureux vous accueille pour offrir
+              des soins personnalisés et de qualité.
+            </p>
+            <p className="text-teal-900 mb-6 leading-relaxed">
+              Mon approche repose sur l'écoute attentive, le dialogue et une
+              prise en charge globale de votre santé. Chaque consultation est
+              adaptée à vos besoins pour garantir votre bien-être.
+            </p>
 
-            {/* Qualifications en format moderne intégré */}
-            <div className="qualifications-modern">
-              <div className="qualification-section">
-                <h4><GraduationCap className="inline-icon" /> Formation & Expertise</h4>
-                <div className="qualification-grid">
-                  <div className="qualification-group">
-                    <h5>Formation</h5>
-                    <ul>
-                      <li>Doctorat en Médecine - Université Paris Descartes (2008)</li>
-                      <li>Diplôme d'État de Docteur en Médecine</li>
-                      <li>Formation continue en médecine préventive</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="qualification-group">
-                    <h5>Certifications</h5>
-                    <ul>
-                      <li>Ordre des Médecins - Inscrite depuis 2008</li>
-                      <li>Certification en médecine d'urgence</li>
-                      <li>Formation en gériatrie et soins palliatifs</li>
-                    </ul>
-                  </div>
-                  
-                  <div className="qualification-group">
-                    <h5>Langues</h5>
-                    <ul>
-                      <li>Français (langue maternelle)</li>
-                      <li>Anglais (courant)</li>
-                      <li>Espagnol (intermédiaire)</li>
-                    </ul>
-                  </div>
+            {/* Qualifications */}
+            <div className="bg-teal-50 rounded-2xl shadow-md p-5 mb-6">
+              <h4 className="text-lg font-bold text-teal-900 mb-4 flex items-center gap-2">
+                <GraduationCap className="text-teal-700" size={20} /> Formation & Expertise
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <h5 className="font-semibold text-teal-800 mb-2">Formation</h5>
+                  <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+                    <li>Doctorat en Médecine - Université Paris Descartes (2008)</li>
+                    <li>Diplôme d'État de Docteur en Médecine</li>
+                    <li>Formation continue en médecine préventive</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-teal-800 mb-2">Certifications</h5>
+                  <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+                    <li>Ordre des Médecins - Inscrite depuis 2008</li>
+                    <li>Certification en médecine d'urgence</li>
+                    <li>Formation en gériatrie et soins palliatifs</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-teal-800 mb-2">Langues</h5>
+                  <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+                    <li>Français (langue maternelle)</li>
+                    <li>Anglais (courant)</li>
+                    <li>Espagnol (intermédiaire)</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="about-sidebar">
-            {/* Statistiques en ligne */}
-            <div className="stats-row">
-              <div className="stat-item">
-                <div className="stat-number">15+</div>
-                <div className="stat-label">Années</div>
+          {/* Right: Sidebar */}
+          <div className="flex-1 flex flex-col gap-3">
+            {/* Statistics */}
+            <div className="flex justify-center gap-8 mb-3">
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-teal-900">15+</span>
+                <span className="text-teal-700 text-sm">Années</span>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">5000+</div>
-                <div className="stat-label">Patients</div>
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-teal-900">5000+</span>
+                <span className="text-teal-700 text-sm">Patients</span>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">98%</div>
-                <div className="stat-label">Satisfaction</div>
+              <div className="flex flex-col items-center">
+                <span className="text-2xl font-bold text-teal-900">98%</span>
+                <span className="text-teal-700 text-sm">Satisfaction</span>
               </div>
             </div>
 
-            {/* Philosophie intégrée */}
-            <div className="philosophy-section">
-              <h4>Ma Philosophie</h4>
-              <blockquote>
-                "Chaque patient est unique et mérite une attention particulière. 
-                Mon objectif est de vous accompagner dans votre parcours de santé 
-                avec empathie, professionnalisme et expertise."
+            {/* Philosophy */}
+            <div className="bg-teal-50 rounded-2xl shadow-md p-6">
+              <h4 className="text-lg font-bold text-teal-900 mb-2">Ma Philosophie</h4>
+              <blockquote className="italic text-teal-800 mb-2">
+                "Chaque patient est unique et mérite une attention particulière.
+                Mon objectif est de vous accompagner dans votre parcours de
+                santé avec empathie, professionnalisme et expertise."
               </blockquote>
-              <cite>- Dr. Hasnaa El Malki</cite>
+              <cite className="text-teal-700">- Dr. Hasnaa El Malki</cite>
             </div>
 
-            {/* Équipe et localisation fusionnées */}
-            <div className="cabinet-info">
-              <div className="team-compact">
-                <h4><Users className="inline-icon" /> Mon Équipe</h4>
-                <div className="team-members-compact">
-                  <div className="team-member-compact">
-                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="Sophie Martin" />
+            {/* Team & Location */}
+            <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-6">
+              {/* Team */}
+              <div>
+                <h4 className="text-lg font-bold text-teal-900 mb-3 flex items-center gap-2">
+                  <Users className="text-teal-700" size={20} /> Mon Équipe
+                </h4>
+                <div className="flex gap-4">
+                  <div className="flex items-center gap-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80"
+                      alt="Sophie Martin"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-teal-100"
+                    />
                     <div>
-                      <strong>Sophie Martin</strong>
-                      <span>Secrétaire médicale (10 ans)</span>
+                      <span className="font-semibold text-teal-900">Sophie Martin</span>
+                      <br />
+                      <span className="text-xs text-teal-700">Secrétaire médicale (10 ans)</span>
                     </div>
                   </div>
-                  <div className="team-member-compact">
-                    <img src="https://images.unsplash.com/photo-1594824388853-edb4b80a8c6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80" alt="Claire Dubois" />
+                  <div className="flex items-center gap-2">
+                    <img
+                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80"
+                      alt="Claire Dubois"
+                      className="w-12 h-12 rounded-full object-cover border-2 border-teal-100"
+                    />
                     <div>
-                      <strong>Claire Dubois</strong>
-                      <span>Assistante médicale (7 ans)</span>
+                      <span className="font-semibold text-teal-900">Claire Dubois</span>
+                      <br />
+                      <span className="text-xs text-teal-700">Assistante médicale (7 ans)</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="location-compact">
-                <h4><MapPin className="inline-icon" /> Cabinet Médical</h4>
-                <p>
-                  123 Avenue de la Santé<br />
-                  75014 Paris, France<br />
-                  <small>Métro ligne 4, station Alésia</small>
+              {/* Location */}
+              <div>
+                <h4 className="text-lg font-bold text-teal-900 mb-2 flex items-center gap-2">
+                  <MapPin className="text-teal-700" size={20} /> Cabinet Médical
+                </h4>
+                <p className="text-teal-900 text-sm">
+                  123 Avenue de la Santé
+                  <br />
+                  75014 Paris, France
+                  <br />
+                  <span className="text-xs text-teal-700">
+                    Métro ligne 4, station Alésia
+                  </span>
                 </p>
               </div>
             </div>

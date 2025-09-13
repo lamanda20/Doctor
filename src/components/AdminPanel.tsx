@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Settings, Mail, Clock, MapPin } from 'lucide-react';
-import './AdminPanel.css';
+
 
 interface AdminPanelProps {
   onClose?: () => void;

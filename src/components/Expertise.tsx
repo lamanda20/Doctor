@@ -1,201 +1,132 @@
-import React from 'react';
-import { 
-  Heart, 
-  Brain, 
-  Baby, 
-  Users, 
-  Activity, 
+import React from "react";
+import {
+  Heart,
+  Brain,
+  Baby,
+  Users,
+  Activity,
   Shield,
-  Thermometer,
-  Pill
-} from 'lucide-react';
-import './Expertise.css';
+} from "lucide-react";
 
 const Expertise: React.FC = () => {
   const expertiseAreas = [
     {
-      id: 'cardiologie',
-      name: 'Cardiologie Préventive',
-      description: 'Prévention et dépistage des maladies cardiovasculaires, suivi de l\'hypertension.',
+      id: "cardiologie",
+      name: "Cardiologie Préventive",
+      description:
+        "Prévention et dépistage des maladies cardiovasculaires, suivi de l'hypertension.",
       icon: <Heart />,
       specializations: [
-        'Dépistage cardiovasculaire',
-        'Suivi de l\'hypertension',
-        'Prévention des AVC',
-        'Conseils nutritionnels cardio'
-      ]
+        "Dépistage cardiovasculaire",
+        "Suivi de l'hypertension",
+        "Prévention des AVC",
+        "Conseils nutritionnels cardio",
+      ],
     },
     {
-      id: 'geriatrie',
-      name: 'Gériatrie',
-      description: 'Soins spécialisés pour les personnes âgées avec une approche globale.',
+      id: "geriatrie",
+      name: "Gériatrie",
+      description:
+        "Soins spécialisés pour les personnes âgées avec une approche globale.",
       icon: <Users />,
       specializations: [
-        'Suivi des pathologies chroniques',
-        'Prévention des chutes',
-        'Coordination des soins',
-        'Maintien à domicile'
-      ]
+        "Suivi des pathologies chroniques",
+        "Prévention des chutes",
+        "Coordination des soins",
+        "Maintien à domicile",
+      ],
     },
     {
-      id: 'pediatrie',
-      name: 'Pédiatrie',
-      description: 'Suivi médical des enfants et adolescents de la naissance à 18 ans.',
+      id: "pediatrie",
+      name: "Pédiatrie",
+      description:
+        "Suivi médical des enfants et adolescents de la naissance à 18 ans.",
       icon: <Baby />,
       specializations: [
-        'Suivi de croissance',
-        'Vaccinations pédiatriques',
-        'Dépistage développemental',
-        'Conseils aux parents'
-      ]
+        "Suivi de croissance",
+        "Vaccinations pédiatriques",
+        "Dépistage développemental",
+        "Conseils aux parents",
+      ],
     },
     {
-      id: 'diabetologie',
-      name: 'Diabétologie',
-      description: 'Prise en charge du diabète et des troubles métaboliques.',
+      id: "diabetologie",
+      name: "Diabétologie",
+      description: "Prise en charge du diabète et des troubles métaboliques.",
       icon: <Activity />,
       specializations: [
-        'Diabète type 1 et 2',
-        'Éducation thérapeutique',
-        'Surveillance glycémique',
-        'Prévention des complications'
-      ]
+        "Diabète type 1 et 2",
+        "Éducation thérapeutique",
+        "Surveillance glycémique",
+        "Prévention des complications",
+      ],
     },
     {
-      id: 'psychiatrie',
-      name: 'Santé Mentale',
-      description: 'Accompagnement pour les troubles anxieux, dépression et burn-out.',
+      id: "psychiatrie",
+      name: "Santé Mentale",
+      description:
+        "Accompagnement pour les troubles anxieux, dépression et burn-out.",
       icon: <Brain />,
       specializations: [
-        'Dépistage dépression',
-        'Gestion du stress',
-        'Troubles anxieux',
-        'Accompagnement psychologique'
-      ]
+        "Dépistage dépression",
+        "Gestion du stress",
+        "Troubles anxieux",
+        "Accompagnement psychologique",
+      ],
     },
     {
-      id: 'urgences',
-      name: 'Médecine d\'Urgence',
-      description: 'Formation en médecine d\'urgence pour une prise en charge optimale.',
+      id: "urgences",
+      name: "Médecine d'Urgence",
+      description:
+        "Formation en médecine d'urgence pour une prise en charge optimale.",
       icon: <Shield />,
       specializations: [
-        'Premiers secours',
-        'Urgences vitales',
-        'Traumatismes mineurs',
-        'Coordination SAMU'
-      ]
-    }
+        "Premiers secours",
+        "Urgences vitales",
+        "Traumatismes mineurs",
+        "Coordination SAMU",
+      ],
+    },
   ];
 
-  const certifications = [
-    {
-      name: 'Diplôme d\'État de Docteur en Médecine',
-      institution: 'Université Paris Descartes',
-      year: '2008'
-    },
-    {
-      name: 'Certificat de Médecine d\'Urgence',
-      institution: 'CHU Cochin',
-      year: '2010'
-    },
-    {
-      name: 'Formation en Gériatrie',
-      institution: 'Société Française de Gériatrie',
-      year: '2015'
-    },
-    {
-      name: 'Diplôme Universitaire Diabétologie',
-      institution: 'Université Pierre et Marie Curie',
-      year: '2018'
-    }
-  ];
-
-  const equipments = [
-    {
-      name: 'Échographe HD',
-      description: 'Imagerie haute résolution',
-      icon: <Activity />
-    },
-    {
-      name: 'ECG Digital',
-      description: 'Monitoring cardiaque',
-      icon: <Heart />
-    },
-    {
-      name: 'Spiromètre',
-      description: 'Tests respiratoires',
-      icon: <Thermometer />
-    },
-    {
-      name: 'Dermatoscope',
-      description: 'Examen dermatologique',
-      icon: <Shield />
-    }
-  ];
+ 
 
   return (
-    <section id="expertise" className="expertise section">
-      <div className="container">
-        <div className="section-header">
-          <h2>Domaines d'Expertise</h2>
-          <p>Des compétences spécialisées pour répondre à tous vos besoins de santé</p>
+    <section id="expertise" className="w-full bg-teal-50 py-20 scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        {/* Header */}
+        <div className="text-center space-y-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900">
+            Domaines d'Expertise
+          </h2>
+          <p className="text-teal-700 text-lg">
+            Des compétences spécialisées pour répondre à tous vos besoins de
+            santé
+          </p>
         </div>
 
-        <div className="expertise-grid">
+        {/* Expertise Areas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertiseAreas.map((area) => (
-            <div key={area.id} className="expertise-card">
-              <div className="expertise-icon">
+            <div
+              key={area.id}
+              className="bg-white rounded-xl shadow-lg p-6 flex flex-col gap-3 hover:shadow-xl transition"
+            >
+              <div className="bg-teal-100 text-teal-700 rounded-full p-3 w-fit mb-2">
                 {area.icon}
               </div>
-              
-              <div className="expertise-content">
-                <h3>{area.name}</h3>
-                <p>{area.description}</p>
-                
-                <ul className="specializations">
-                  {area.specializations.map((spec, index) => (
-                    <li key={index}>{spec}</li>
-                  ))}
-                </ul>
-              </div>
+              <h3 className="text-lg font-bold text-teal-900">{area.name}</h3>
+              <p className="text-teal-800 text-sm mb-2">{area.description}</p>
+              <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+                {area.specializations.map((spec, idx) => (
+                  <li key={idx}>{spec}</li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
 
-        <div className="certifications-section">
-          <h3>Formations & Certifications</h3>
-          <div className="certifications-grid">
-            {certifications.map((cert, index) => (
-              <div key={index} className="certification-card">
-                <div className="cert-icon">
-                  <Pill />
-                </div>
-                <div className="cert-content">
-                  <h4>{cert.name}</h4>
-                  <p>{cert.institution}</p>
-                  <span className="cert-year">{cert.year}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="equipment-highlight">
-          <h3>Équipements Médicaux</h3>
-          <div className="equipment-grid">
-            {equipments.map((equipment, index) => (
-              <div key={index} className="equipment-item">
-                <div className="equipment-icon">
-                  {equipment.icon}
-                </div>
-                <div className="equipment-info">
-                  <h4>{equipment.name}</h4>
-                  <p>{equipment.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );
