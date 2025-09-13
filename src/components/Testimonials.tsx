@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
       patientName: "Sophie Martin",
       rating: 5,
       comment:
-        "Dr. Dubois est une médecin exceptionnelle. Elle prend le temps d'écouter et explique clairement les traitements. Je recommande vivement !",
+        "Dr. Hasnaa El Malki est une médecin exceptionnelle. Elle prend le temps d'écouter et explique clairement les traitements. Je recommande vivement !",
       date: "2024-08-15",
       verified: true,
     },
@@ -35,7 +35,7 @@ const Testimonials: React.FC = () => {
       patientName: "Thomas D.",
       rating: 5,
       comment:
-        "Cabinet facilement accessible, personnel accueillant. Dr. Dubois a su diagnostiquer rapidement mon problème de santé.",
+        "Cabinet facilement accessible, personnel accueillant. Dr. El Malki a su diagnostiquer rapidement mon problème de santé.",
       date: "2024-07-10",
       verified: true,
     },
@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
       patientName: "Isabelle R.",
       rating: 5,
       comment:
-        "Je suis suivie pour une maladie chronique. Dr. Dubois fait un suivi rigoureux et rassurant. Une vraie professionnelle !",
+        "Je suis suivie pour une maladie chronique. Dr. El Malki fait un suivi rigoureux et rassurant. Une vraie professionnelle !",
       date: "2024-06-25",
       verified: true,
     },
@@ -53,7 +53,7 @@ const Testimonials: React.FC = () => {
       patientName: "Michel B.",
       rating: 5,
       comment:
-        "Excellente prise en charge de mes enfants. Dr. Dubois sait être rassurante avec eux tout en étant très compétente.",
+        "Excellente prise en charge de mes enfants. Dr. El Malki sait être rassurante avec eux tout en étant très compétente.",
       date: "2024-08-08",
       verified: true,
     },
