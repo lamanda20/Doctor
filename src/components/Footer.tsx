@@ -89,7 +89,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-[#3790B4]" />
-                <span>elmalki.hasnaa@gmail.com</span>
+                <span>mhe25@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <Clock size={16} className="text-[#3790B4]" />

@@ -35,9 +35,6 @@ const galleryImages: GalleryImage[] = [
     description: "Mon espace de travail où je vous reçois en consultation",
     category: "cabinet",
   },
-  
-
-  
 
   // Équipements
   {
@@ -64,7 +61,10 @@ const Gallery: React.FC = () => {
       : galleryImages.filter((img) => img.category === filter);
 
   return (
-    <section id="gallery" className="w-full bg-[#3790B4]/5 py-24 scroll-mt-28">
+    <section
+      id="gallery"
+      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-28"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

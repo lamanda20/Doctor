@@ -9,7 +9,10 @@ import {
 
 const About: React.FC = () => {
   return (
-    <section id="a-propos" className="w-full bg-[#3790B4]/5 py-14 scroll-mt-28">
+    <section
+      id="a-propos"
+      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-28"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8">
@@ -135,7 +138,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="text-[#3790B4]" size={16} />
-                  <span>elmalki.hasnaa@gmail.com</span>
+                  <span>cmhe25@gmail.com</span>
                 </div>
               </div>
             </div>

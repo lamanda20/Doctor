@@ -8,7 +8,7 @@ const Testimonials: React.FC = () => {
     patientName: "Ziyad Grm",
     rating: 5,
     comment:
-      "Médecin très à l’écoute, professionnelle et humain. Elle prend le temps de bien expliquer les choses et de rassurer son patient. Je recommande sans hésitation.",
+      "Médecin très attentive, professionnelle et humaine. Elle prend le temps d'expliquer clairement et de rassurer ses patients. Je recommande sans hésitation.",
     date: "2025-08-13",
     verified: true,
   },
@@ -17,7 +17,7 @@ const Testimonials: React.FC = () => {
     patientName: "Taha GHADI",
     rating: 5,
     comment:
-      "Médecin très compétente et à l’écoute. Prend le temps de bien expliquer, met le patient en confiance et fait preuve d’un grand professionnalisme. Je recommande vivement.",
+      "Médecin compétente et très attentive. Explique bien, rassure le patient et fait preuve d'un grand professionnalisme. Je recommande vivement.",
     date: "2025-09-12",
     verified: true,
   },
@@ -25,8 +25,9 @@ const Testimonials: React.FC = () => {
     id: "3",
     patientName: "Ghadi Rachid",
     rating: 5,
-    comment: "Nouveau patient, très satisfait du suivi et de l’écoute.",
-    date: "2025-09-11",
+    comment:
+      "Nouveau patient, très satisfait du suivi et de l'écoute.",
+    date: "2025-09-13",
     verified: true,
   },
   {
@@ -41,7 +42,7 @@ const Testimonials: React.FC = () => {
     id: "5",
     patientName: "Mohamad Atbir",
     rating: 5,
-    comment: "Médecin compétente et à l’écoute. Très bon suivi.",
+    comment: "Médecin compétente et attentive. Très bon suivi.",
     date: "2025-08-13",
     verified: true,
   },
@@ -62,7 +63,7 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="témoignages"
-      className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20"
+      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-20"
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

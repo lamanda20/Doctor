@@ -12,7 +12,7 @@ import {
 const Location: React.FC = () => {
   return (
     <section
-      className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20"
+      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-20"
       id="location"
       aria-labelledby="location-heading"
     >
@@ -111,7 +111,7 @@ const Location: React.FC = () => {
                 <div className="flex items-center gap-2">
                   <Mail className="text-[#6F78B9]" size={20} />
                   <span className="text-[#40338B] text-sm">
-                    elmalki.hasnaa@gmail.com
+                   cmhe25@gmail.com
                   </span>
                 </div>
               </div>
