@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Navigation } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Clock,
+  Navigation,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
 const Location: React.FC = () => {
   return (
@@ -23,9 +30,9 @@ const Location: React.FC = () => {
             Localisation & Contact
           </h2>
           <p className="text-[#6F78B9] text-lg max-w-3xl mx-auto">
-            Un cabinet facilement accessible au cœur de Paris, bien desservi par
-            les transports. Retrouvez ici toutes les informations pratiques pour
-            nous joindre.
+            Un cabinet facilement accessible à Ait Melloul, offrant un accueil
+            chaleureux et toutes les informations nécessaires pour vous
+            recevoir.
           </p>
         </motion.div>
 
@@ -38,7 +45,7 @@ const Location: React.FC = () => {
             className="flex-1 bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-6"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.8267267!2d2.3272596!3d48.8334444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67191e1b3f6e1%3A0x2b1234567890abcd!2sParis%2014e%20Arrondissement%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.0306726439806!2d-9.501000600000001!3d30.346209299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c709eacdc4b1%3A0x9b95c2c0dbc89dcc!2sCabinet%20de%20M%C3%A9decine%20G%C3%A9n%C3%A9rale%2C%20Diab%C3%A9tologie%20%26%20%C3%89chographie%20Dr.%20Hasnaa%20El%20Malki!5e1!3m2!1sar!2sma!4v1757789439023!5m2!1sar!2sma"
               className="w-full h-64 rounded-xl border-none mb-2"
               allowFullScreen
               loading="lazy"
@@ -52,11 +59,11 @@ const Location: React.FC = () => {
                   Cabinet Dr. Hasnaa El Malki
                 </h3>
                 <p className="text-[#40338B]/90 text-sm">
-                  123 Avenue de la Santé
+                  Immeuble Damou, 1er étage
                   <br />
-                  75014 Paris, France
+                  Route de Biougra, Av. Mohamed VI
                   <br />
-                  2ème étage, Ascenseur disponible
+                  Ait Melloul, Maroc
                 </p>
               </div>
             </div>
@@ -71,25 +78,40 @@ const Location: React.FC = () => {
           >
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="font-bold text-[#40338B] mb-2 flex items-center gap-2">
-                <MapPin className="text-[#6F78B9]" size={20} /> Adresse Complète
+                <Navigation className="text-[#6F78B9]" size={20} /> Adresse
+                Complète
               </h3>
               <div className="flex gap-4 items-center">
-                <Navigation className="text-[#6F78B9]" size={24} />
+                <MapPin className="text-[#6F78B9]" size={24} />
                 <div>
                   <p className="text-[#40338B] text-sm">
-                    123 Avenue de la Santé
+                    Immeuble Damou, 1er étage
                   </p>
-                  <p className="text-[#40338B] text-sm">75014 Paris</p>
-                  <p className="text-[#6F78B9] text-xs">
-                    2ème étage (Ascenseur disponible)
+                  <p className="text-[#40338B] text-sm">
+                    Route de Biougra, Av. Mohamed VI
                   </p>
+                  <p className="text-[#40338B] text-sm">Ait Melloul, Agadir</p>
                 </div>
               </div>
-              <div className="flex gap-4 items-center mt-3">
-                <Phone className="text-[#6F78B9]" size={24} />
-                <div>
-                  <p className="text-[#40338B] text-sm">+33 1 23 45 67 89</p>
-                  <p className="text-[#6F78B9] text-xs">Secrétariat médical</p>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <Phone className="text-[#6F78B9]" size={20} />
+                  <span className="text-[#40338B] text-sm">
+                    +212 (0) 5 28 24 11 19
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="text-[#6F78B9]" size={20} />
+                  <span className="text-[#40338B] text-sm">
+                    WhatsApp: +212 (0) 6 41 23 83 44
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="text-[#6F78B9]" size={20} />
+                  <span className="text-[#40338B] text-sm">
+                    elmalki.hasnaa@gmail.com
+                  </span>
                 </div>
               </div>
             </div>
@@ -97,7 +119,6 @@ const Location: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-lg p-6">
               <h3 className="font-bold text-[#40338B] mb-2 flex items-center gap-2">
                 <Clock className="text-[#6F78B9]" size={20} /> Horaires
-                d'Ouverture
               </h3>
               <div className="text-[#40338B] text-sm space-y-1">
                 <div>Lundi - Vendredi : 8h00 - 19h00</div>

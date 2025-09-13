@@ -2,7 +2,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
-import Expertise from "./components/Expertise";
 import Gallery from "./components/Gallery";
 import Location from "./components/Location";
 import Testimonials from "./components/Testimonials";
@@ -17,7 +16,6 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Expertise />
         <Gallery />
         <Location />
         <Testimonials />

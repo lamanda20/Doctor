@@ -3,61 +3,50 @@ import { Star, Quote, CheckCircle } from "lucide-react";
 
 const Testimonials: React.FC = () => {
   const testimonials = [
-    {
-      id: "1",
-      patientName: "Sophie Martin",
-      rating: 5,
-      comment:
-        "Dr. Dubois est une médecin exceptionnelle. Elle prend le temps d'écouter et explique clairement les traitements. Je recommande vivement !",
-      date: "2024-08-15",
-      verified: true,
-    },
-    {
-      id: "2",
-      patientName: "Jean-Pierre L.",
-      rating: 5,
-      comment:
-        "Très professionnelle et à l'écoute. Le cabinet est moderne et bien équipé. Un suivi médical de qualité.",
-      date: "2024-07-28",
-      verified: true,
-    },
-    {
-      id: "3",
-      patientName: "Marie C.",
-      rating: 5,
-      comment:
-        "Une docteure bienveillante qui suit toute ma famille depuis 3 ans. Toujours disponible et de très bon conseil.",
-      date: "2024-08-02",
-      verified: true,
-    },
-    {
-      id: "4",
-      patientName: "Thomas D.",
-      rating: 5,
-      comment:
-        "Cabinet facilement accessible, personnel accueillant. Dr. Dubois a su diagnostiquer rapidement mon problème de santé.",
-      date: "2024-07-10",
-      verified: true,
-    },
-    {
-      id: "5",
-      patientName: "Isabelle R.",
-      rating: 5,
-      comment:
-        "Je suis suivie pour une maladie chronique. Dr. Dubois fait un suivi rigoureux et rassurant. Une vraie professionnelle !",
-      date: "2024-06-25",
-      verified: true,
-    },
-    {
-      id: "6",
-      patientName: "Michel B.",
-      rating: 5,
-      comment:
-        "Excellente prise en charge de mes enfants. Dr. Dubois sait être rassurante avec eux tout en étant très compétente.",
-      date: "2024-08-08",
-      verified: true,
-    },
-  ];
+  {
+    id: "1",
+    patientName: "Ziyad Grm",
+    rating: 5,
+    comment:
+      "Médecin très à l’écoute, professionnelle et humain. Elle prend le temps de bien expliquer les choses et de rassurer son patient. Je recommande sans hésitation.",
+    date: "2025-08-13",
+    verified: true,
+  },
+  {
+    id: "2",
+    patientName: "Taha GHADI",
+    rating: 5,
+    comment:
+      "Médecin très compétente et à l’écoute. Prend le temps de bien expliquer, met le patient en confiance et fait preuve d’un grand professionnalisme. Je recommande vivement.",
+    date: "2025-09-12",
+    verified: true,
+  },
+  {
+    id: "3",
+    patientName: "Ghadi Rachid",
+    rating: 5,
+    comment: "Nouveau patient, très satisfait du suivi et de l’écoute.",
+    date: "2025-09-11",
+    verified: true,
+  },
+  {
+    id: "4",
+    patientName: "Rayan El Malki",
+    rating: 5,
+    comment: "Excellent suivi et très professionnel. Je recommande !",
+    date: "2025-08-13",
+    verified: true,
+  },
+  {
+    id: "5",
+    patientName: "Mohamad Atbir",
+    rating: 5,
+    comment: "Médecin compétente et à l’écoute. Très bon suivi.",
+    date: "2025-08-13",
+    verified: true,
+  },
+];
+
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (

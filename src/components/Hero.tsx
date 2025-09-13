@@ -7,7 +7,8 @@ import {
   Stethoscope,
   Phone,
   Mail,
-  Clock,
+  MapPin,
+  MessageCircle,
 } from "lucide-react";
 
 const Hero: React.FC = () => {
@@ -32,9 +33,9 @@ const Hero: React.FC = () => {
               </span>
             </h1>
             <p className="text-base sm:text-lg text-[#40338B] mb-8 leading-relaxed">
-              Médecin généraliste expérimentée, offrant des soins de qualité
-              dans un environnement chaleureux et professionnel. Plus de 15 ans
-              d'expérience au service de votre santé et bien-être.
+              Médecin généraliste diplômée au Maroc et à l’international,
+              spécialisée en échographie et diabétologie. Offrant des soins de
+              qualité et un suivi personnalisé pour toute la famille.
             </p>
 
             {/* Features grid */}
@@ -60,7 +61,7 @@ const Hero: React.FC = () => {
               <div className="flex flex-col items-center gap-2 bg-white rounded-lg shadow-md p-4">
                 <Award className="text-[#3790B4]" size={24} />
                 <span className="text-[#40338B] text-sm text-center">
-                  15+ ans d'expérience
+                  Diplômée en Échographie & Diabétologie
                 </span>
               </div>
             </div>
@@ -88,8 +89,7 @@ const Hero: React.FC = () => {
             <div className="bg-white rounded-2xl shadow-xl p-5 w-full max-w-xs flex flex-col items-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-[#3790B4]">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                  alt="Dr. Hasnaa El Malki"
+                  src="/logo.png" alt="Dr. Hasnaa El Malki"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -97,22 +97,22 @@ const Hero: React.FC = () => {
                 Dr. Hasnaa El Malki
               </h3>
               <p className="text-sm text-[#6F78B9] mb-4">
-                Diplômée de la Faculté de Médecine de Paris
+                Médecin Généraliste • Agadir, Ait Melloul
               </p>
 
               <div className="flex gap-6 mb-4">
                 <div className="flex flex-col items-center">
-                  <span className="text-[#40338B] font-bold text-lg">15+</span>
+                  <span className="text-[#40338B] font-bold text-lg">5+</span>
                   <span className="text-xs text-[#6F78B9]">
                     Années d'expérience
                   </span>
                 </div>
                 <div className="flex flex-col items-center">
                   <span className="text-[#40338B] font-bold text-lg">
-                    5000+
+                    1000+
                   </span>
                   <span className="text-xs text-[#6F78B9]">
-                    Patients satisfaits
+                    Patients suivis
                   </span>
                 </div>
               </div>
@@ -122,15 +122,22 @@ const Hero: React.FC = () => {
               <div className="w-full flex flex-col gap-2 text-sm">
                 <div className="flex items-center gap-2 text-[#40338B]">
                   <Phone size={16} />
-                  <span>01 23 45 67 89</span>
+                  <span>+212 (0) 5 28 24 11 19</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#40338B]">
+                  <MessageCircle size={16} />
+                  <span>WhatsApp : +212 (0) 6 41 23 83 44</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#40338B]">
                   <Mail size={16} />
-                  <span>contact@dr-hasmalki.fr</span>
+                  <span>elmalki.hasnaa@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#40338B]">
-                  <Clock size={16} />
-                  <span>Lun-Ven 8h-18h • Sam 9h-12h</span>
+                  <MapPin size={30} />
+                  <span>
+                    Immeuble Damou, 1er étage, Route de Biougra, Av. Mohamed VI,
+                    Ait Melloul
+                  </span>
                 </div>
               </div>
             </div>

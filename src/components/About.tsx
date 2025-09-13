@@ -1,93 +1,97 @@
 import React from "react";
-import { GraduationCap, MapPin, Users } from "lucide-react";
+import {
+  GraduationCap,
+  MapPin,
+  Phone,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
 const About: React.FC = () => {
   return (
     <section id="a-propos" className="w-full bg-[#3790B4]/5 py-14 scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2">
             À Propos de Dr. Hasnaa El Malki
           </h2>
           <p className="text-[#6F78B9] text-lg">
-            Votre médecin de confiance, à votre écoute depuis plus de 15 ans
+            Médecin généraliste diplômée, spécialisée en échographie générale et
+            diabétologie.
           </p>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
-          {/* Left: Text & Qualifications */}
+          {/* Left: Description + Diplômes & Compétences */}
           <div className="flex-1">
-            <h3 className="text-xl font-semibold text-[#40338B] mb-4">
-              Votre Santé, Ma Priorité
-            </h3>
             <p className="text-[#40338B] mb-4 leading-relaxed">
-              Diplômée de la Faculté de Médecine de Paris en 2008, j'exerce la
-              médecine générale avec passion et dévouement depuis plus de 15
-              ans. Mon cabinet moderne et chaleureux vous accueille pour offrir
-              des soins personnalisés et de qualité.
-            </p>
-            <p className="text-[#40338B] mb-6 leading-relaxed">
-              Mon approche repose sur l'écoute attentive, le dialogue et une
-              prise en charge globale de votre santé. Chaque consultation est
-              adaptée à vos besoins pour garantir votre bien-être.
+              Dr. Hasnaa El Malki est diplômée de la Faculté de Médecine et de
+              Pharmacie de Casablanca en médecine générale. Elle a complété des
+              formations spécialisées en échographie générale à la Faculté de
+              Médecine de Marrakech et en diabétologie à l'Université Paris 13.
             </p>
 
-            {/* Qualifications */}
+            <p className="text-[#40338B] mb-6 leading-relaxed">
+              Son activité clinique comprend la réalisation d'ECG, le suivi de
+              grossesses et la prise en charge des pathologies courantes avec un
+              accent sur la prévention et le suivi personnalisé des patients.
+              Elle associe rigueur clinique et accompagnement humain.
+            </p>
+
             <div className="bg-white rounded-2xl shadow-md p-5 mb-6">
               <h4 className="text-lg font-bold text-[#40338B] mb-4 flex items-center gap-2">
-                <GraduationCap className="text-[#3790B4]" size={20} /> Formation
-                & Expertise
+                <GraduationCap className="text-[#3790B4]" size={20} /> Diplômes
+                & Compétences
               </h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h5 className="font-semibold text-[#6F78B9] mb-2">
-                    Formation
+                    Diplômes
                   </h5>
                   <ul className="list-disc list-inside text-[#40338B] text-sm space-y-1">
                     <li>
-                      Doctorat en Médecine - Université Paris Descartes (2008)
+                      Doctorat en Médecine - Faculté de Médecine et de Pharmacie
+                      de Casablanca
                     </li>
-                    <li>Diplôme d'État de Docteur en Médecine</li>
-                    <li>Formation continue en médecine préventive</li>
+                    <li>
+                      Diplôme en Échographie Générale - Faculté de Médecine de
+                      Marrakech
+                    </li>
+                    <li>Diplôme en Diabétologie - Université Paris 13</li>
                   </ul>
                 </div>
+
                 <div>
                   <h5 className="font-semibold text-[#6F78B9] mb-2">
-                    Certifications
+                    Compétences cliniques
                   </h5>
                   <ul className="list-disc list-inside text-[#40338B] text-sm space-y-1">
-                    <li>Ordre des Médecins - Inscrite depuis 2008</li>
-                    <li>Certification en médecine d'urgence</li>
-                    <li>Formation en gériatrie et soins palliatifs</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-[#6F78B9] mb-2">Langues</h5>
-                  <ul className="list-disc list-inside text-[#40338B] text-sm space-y-1">
-                    <li>Français (langue maternelle)</li>
-                    <li>Anglais (courant)</li>
-                    <li>Espagnol (intermédiaire)</li>
+                    <li>Interprétation et réalisation d'ECG</li>
+                    <li>Suivi de grossesses</li>
+                    <li>Prise en charge en médecine générale et prévention</li>
+                    <li>Échographie diagnostique</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: Sidebar */}
-          <div className="flex-1 flex flex-col gap-3">
+          {/* Right: Stats, philosophie, cabinet & contact */}
+          <div className="flex-1 flex flex-col gap-6">
             {/* Statistics */}
             <div className="flex justify-center gap-8 mb-3">
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-[#40338B]">15+</span>
+                <span className="text-2xl font-bold text-[#40338B]">5+</span>
                 <span className="text-[#6F78B9] text-sm">Années</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-[#40338B]">5000+</span>
+                <span className="text-2xl font-bold text-[#40338B]">1000+</span>
                 <span className="text-[#6F78B9] text-sm">Patients</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-[#40338B]">98%</span>
+                <span className="text-2xl font-bold text-[#40338B]">100%</span>
                 <span className="text-[#6F78B9] text-sm">Satisfaction</span>
               </div>
             </div>
@@ -95,74 +99,44 @@ const About: React.FC = () => {
             {/* Philosophy */}
             <div className="bg-white rounded-2xl shadow-md p-6">
               <h4 className="text-lg font-bold text-[#40338B] mb-2">
-                Ma Philosophie
+                Sa philosophie
               </h4>
               <blockquote className="italic text-[#6F78B9] mb-2">
-                "Chaque patient est unique et mérite une attention particulière.
-                Mon objectif est de vous accompagner dans votre parcours de
-                santé avec empathie, professionnalisme et expertise."
+                « Chaque patient mérite une prise en charge personnalisée,
+                fondée sur l'écoute, la prévention et un suivi médical
+                rigoureux. »
               </blockquote>
-              <cite className="text-[#3790B4]">- Dr. Hasnaa El Malki</cite>
+              <cite className="text-[#3790B4] block mt-2">
+                — Dr. Hasnaa El Malki
+              </cite>
             </div>
 
-            {/* Team & Location */}
-            <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-6">
-              {/* Team */}
-              <div>
-                <h4 className="text-lg font-bold text-[#40338B] mb-3 flex items-center gap-2">
-                  <Users className="text-[#3790B4]" size={20} /> Mon Équipe
-                </h4>
-                <div className="flex gap-4">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80"
-                      alt="Sophie Martin"
-                      className="w-12 h-12 rounded-full object-cover border-2 border-[#3790B4]/30"
-                    />
-                    <div>
-                      <span className="font-semibold text-[#40338B]">
-                        Sophie Martin
-                      </span>
-                      <br />
-                      <span className="text-xs text-[#6F78B9]">
-                        Secrétaire médicale (10 ans)
-                      </span>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <img
-                      src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=60&q=80"
-                      alt="Claire Dubois"
-                      className="w-12 h-12 rounded-full object-cover border-2 border-[#3790B4]/30"
-                    />
-                    <div>
-                      <span className="font-semibold text-[#40338B]">
-                        Claire Dubois
-                      </span>
-                      <br />
-                      <span className="text-xs text-[#6F78B9]">
-                        Assistante médicale (7 ans)
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {/* Cabinet & Contact */}
+            <div className="bg-white rounded-2xl shadow-md p-6">
+              <h4 className="text-lg font-bold text-[#40338B] mb-3 flex items-center gap-2">
+                <MapPin className="text-[#3790B4]" size={20} /> Cabinet
+              </h4>
+              <p className="text-[#40338B] text-sm mb-4">
+                Immeuble Damou, 1er étage
+                <br />
+                Route de Biougra, Av. Mohamed VI
+                <br />
+                Ait Melloul, Agadir
+              </p>
 
-              {/* Location */}
-              <div>
-                <h4 className="text-lg font-bold text-[#40338B] mb-2 flex items-center gap-2">
-                  <MapPin className="text-[#3790B4]" size={20} /> Cabinet
-                  Médical
-                </h4>
-                <p className="text-[#40338B] text-sm">
-                  123 Avenue de la Santé
-                  <br />
-                  75014 Paris, France
-                  <br />
-                  <span className="text-xs text-[#6F78B9]">
-                    Métro ligne 4, station Alésia
-                  </span>
-                </p>
+              <div className="space-y-2 text-[#40338B] text-sm">
+                <div className="flex items-center gap-2">
+                  <Phone className="text-[#3790B4]" size={16} />
+                  <span>+212 (0) 5 28 24 11 19</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="text-[#3790B4]" size={16} />
+                  <span>WhatsApp : +212 (0) 6 41 23 83 44</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Mail className="text-[#3790B4]" size={16} />
+                  <span>elmalki.hasnaa@gmail.com</span>
+                </div>
               </div>
             </div>
           </div>
