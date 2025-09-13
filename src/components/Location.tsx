@@ -45,13 +45,14 @@ const Location: React.FC = () => {
             className="flex-1 bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-6"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.0306726439806!2d-9.501000600000001!3d30.346209299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c709eacdc4b1%3A0x9b95c2c0dbc89dcc!2sCabinet%20de%20M%C3%A9decine%20G%C3%A9n%C3%A9rale%2C%20Diab%C3%A9tologie%20%26%20%C3%89chographie%20Dr.%20Hasnaa%20El%20Malki!5e1!3m2!1sar!2sma!4v1757789439023!5m2!1sar!2sma"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.0306726439806!2d-9.501000600000001!3d30.346209299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3c709eacdc4b1%3A0x9b95c2c0dbc89dcc!2sCabinet%20de%20M%C3%A9decine%20G%C3%A9n%C3%A9rale%2C%20Diab%C3%A9tologie%20%26%20%C3%89chographie%20Dr.%20Hasnaa%20El%20Malki!5e1!3m2!1sfr!2sma!4v1757789439023!5m2!1sfr!2sma"
               className="w-full h-64 rounded-xl border-none mb-2"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Localisation du cabinet"
             ></iframe>
+
             <div className="flex gap-4 items-center">
               <MapPin className="text-[#6F78B9]" size={32} />
               <div>
