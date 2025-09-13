@@ -40,25 +40,27 @@ const Hero: React.FC = () => {
 
             {/* Features grid */}
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="flex items-center gap-2 bg-white rounded-lg shadow-md px-4 py-2">
-                <Stethoscope className="text-teal-600" size={22} />
-                <span className="text-teal-900 text-sm">
+              <div className="flex flex-col items-center gap-2 bg-white rounded-lg shadow-md p-4">
+                <Stethoscope className="text-teal-600" size={20} />
+                <span className="text-teal-900 text-sm text-center">
                   Consultations de qualité
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-white rounded-lg shadow-md px-4 py-2">
-                <Shield className="text-teal-600" size={22} />
-                <span className="text-teal-900 text-sm">
+              <div className="flex flex-col items-center gap-2 bg-white rounded-lg shadow-md p-4">
+                <Shield className="text-teal-600" size={20} />
+                <span className="text-teal-900 text-sm text-center">
                   Soins professionnels
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-white rounded-lg shadow-md px-4 py-2">
-                <Users className="text-teal-600" size={22} />
-                <span className="text-teal-900 text-sm">Approche humaine</span>
+              <div className="flex flex-col items-center gap-2 bg-white rounded-lg shadow-md p-4">
+                <Users className="text-teal-600" size={20} />
+                <span className="text-teal-900 text-sm text-center">
+                  Approche humaine
+                </span>
               </div>
-              <div className="flex items-center gap-2 bg-white rounded-lg shadow-md px-4 py-2">
-                <Award className="text-teal-600" size={22} />
-                <span className="text-teal-900 text-sm">
+              <div className="flex flex-col items-center gap-2 bg-white rounded-lg shadow-md p-4">
+                <Award className="text-teal-600" size={20} />
+                <span className="text-teal-900 text-sm text-center">
                   15+ ans d'expérience
                 </span>
               </div>
