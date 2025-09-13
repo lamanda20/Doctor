@@ -73,23 +73,21 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="témoignages"
-      className="w-full bg-teal-50 py-20 scroll-mt-20"
+      className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20"
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
           <h2
             id="testimonials-heading"
-            className="text-3xl sm:text-4xl font-bold text-teal-900 mb-2"
+            className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2"
           >
             Témoignages Patients
           </h2>
-          <p className="text-teal-700 text-lg">
+          <p className="text-[#6F78B9] text-lg">
             Ce que disent nos patients de leur expérience
           </p>
         </div>
-
-        
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-5">
           {testimonials.map((testimonial) => (
@@ -98,9 +96,9 @@ const Testimonials: React.FC = () => {
               className="bg-white rounded-xl shadow p-6 flex flex-col gap-3"
             >
               <div className="flex items-center gap-4 mb-2">
-                <Quote className="text-teal-700" size={24} />
+                <Quote className="text-[#3790B4]" size={24} />
                 <div>
-                  <h4 className="text-base font-bold text-teal-900 mb-1">
+                  <h4 className="text-base font-bold text-[#40338B] mb-1">
                     {testimonial.patientName}
                   </h4>
                   <div className="flex gap-1 text-yellow-400">
@@ -108,16 +106,16 @@ const Testimonials: React.FC = () => {
                   </div>
                 </div>
                 {testimonial.verified && (
-                  <div className="flex items-center gap-1 text-teal-700 ml-auto">
+                  <div className="flex items-center gap-1 text-[#3790B4] ml-auto">
                     <CheckCircle size={16} />
                     <span className="text-xs font-semibold">Vérifié</span>
                   </div>
                 )}
               </div>
-              <p className="italic text-teal-800 text-sm mb-2">
+              <p className="italic text-[#6F78B9] text-sm mb-2">
                 "{testimonial.comment}"
               </p>
-              <div className="text-xs text-teal-700 text-right">
+              <div className="text-xs text-[#6F78B9] text-right">
                 {new Date(testimonial.date).toLocaleDateString("fr-FR", {
                   year: "numeric",
                   month: "long",

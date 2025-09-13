@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Heart,
-  Brain,
-  Baby,
-  Users,
-  Activity,
-  Shield,
-} from "lucide-react";
+import { Heart, Brain, Baby, Users, Activity, Shield } from "lucide-react";
 
 const Expertise: React.FC = () => {
   const expertiseAreas = [
@@ -89,17 +82,18 @@ const Expertise: React.FC = () => {
     },
   ];
 
- 
-
   return (
-    <section id="expertise" className="w-full bg-teal-50 py-20 scroll-mt-20">
+    <section
+      id="expertise"
+      className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B]">
             Domaines d'Expertise
           </h2>
-          <p className="text-teal-700 text-lg">
+          <p className="text-[#6F78B9] text-lg">
             Des compétences spécialisées pour répondre à tous vos besoins de
             santé
           </p>
@@ -112,12 +106,12 @@ const Expertise: React.FC = () => {
               key={area.id}
               className="bg-white rounded-xl shadow-lg p-6 flex flex-col gap-3 hover:shadow-xl transition"
             >
-              <div className="bg-teal-100 text-teal-700 rounded-full p-3 w-fit mb-2">
-                {area.icon}
+              <div className="bg-[#3790B4]/20 text-[#3790B4] rounded-full p-3 w-fit mb-2">
+                {React.cloneElement(area.icon, { size: 20 })}
               </div>
-              <h3 className="text-lg font-bold text-teal-900">{area.name}</h3>
-              <p className="text-teal-800 text-sm mb-2">{area.description}</p>
-              <ul className="list-disc list-inside text-teal-900 text-sm space-y-1">
+              <h3 className="text-lg font-bold text-[#40338B]">{area.name}</h3>
+              <p className="text-[#40338B] text-sm mb-2">{area.description}</p>
+              <ul className="list-disc list-inside text-[#40338B] text-sm space-y-1">
                 {area.specializations.map((spec, idx) => (
                   <li key={idx}>{spec}</li>
                 ))}
@@ -125,8 +119,6 @@ const Expertise: React.FC = () => {
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

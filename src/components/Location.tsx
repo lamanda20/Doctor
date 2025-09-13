@@ -1,16 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  MapPin,
-  Phone,
-  Clock,
-  Navigation,
-} from "lucide-react";
+import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 
 const Location: React.FC = () => {
   return (
     <section
-      className="w-full bg-teal-50 py-20 scroll-mt-20"
+      className="w-full bg-[#3790B4]/5 py-20 scroll-mt-20"
       id="location"
       aria-labelledby="location-heading"
     >
@@ -23,11 +18,11 @@ const Location: React.FC = () => {
         >
           <h2
             id="location-heading"
-            className="text-3xl sm:text-4xl font-bold text-teal-900 mb-2"
+            className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2"
           >
             Localisation & Contact
           </h2>
-          <p className="text-teal-700 text-lg max-w-3xl mx-auto">
+          <p className="text-[#6F78B9] text-lg max-w-3xl mx-auto">
             Un cabinet facilement accessible au cœur de Paris, bien desservi par
             les transports. Retrouvez ici toutes les informations pratiques pour
             nous joindre.
@@ -51,12 +46,12 @@ const Location: React.FC = () => {
               title="Localisation du cabinet"
             ></iframe>
             <div className="flex gap-4 items-center">
-              <MapPin className="text-teal-700" size={32} />
+              <MapPin className="text-[#6F78B9]" size={32} />
               <div>
-                <h3 className="font-bold text-teal-900 mb-1">
+                <h3 className="font-bold text-[#40338B] mb-1">
                   Cabinet Dr. Hasnaa El Malki
                 </h3>
-                <p className="text-teal-800 text-sm">
+                <p className="text-[#40338B]/90 text-sm">
                   123 Avenue de la Santé
                   <br />
                   75014 Paris, France
@@ -75,43 +70,41 @@ const Location: React.FC = () => {
             className="flex-1 flex flex-col gap-6"
           >
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-bold text-teal-900 mb-2 flex items-center gap-2">
-                <MapPin className="text-teal-700" size={20} /> Adresse Complète
+              <h3 className="font-bold text-[#40338B] mb-2 flex items-center gap-2">
+                <MapPin className="text-[#6F78B9]" size={20} /> Adresse Complète
               </h3>
               <div className="flex gap-4 items-center">
-                <Navigation className="text-teal-700" size={24} />
+                <Navigation className="text-[#6F78B9]" size={24} />
                 <div>
-                  <p className="text-teal-800 text-sm">
+                  <p className="text-[#40338B] text-sm">
                     123 Avenue de la Santé
                   </p>
-                  <p className="text-teal-800 text-sm">75014 Paris</p>
-                  <p className="text-teal-700 text-xs">
+                  <p className="text-[#40338B] text-sm">75014 Paris</p>
+                  <p className="text-[#6F78B9] text-xs">
                     2ème étage (Ascenseur disponible)
                   </p>
                 </div>
               </div>
               <div className="flex gap-4 items-center mt-3">
-                <Phone className="text-teal-700" size={24} />
+                <Phone className="text-[#6F78B9]" size={24} />
                 <div>
-                  <p className="text-teal-800 text-sm">+33 1 23 45 67 89</p>
-                  <p className="text-teal-700 text-xs">Secrétariat médical</p>
+                  <p className="text-[#40338B] text-sm">+33 1 23 45 67 89</p>
+                  <p className="text-[#6F78B9] text-xs">Secrétariat médical</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-white rounded-2xl shadow-lg p-6">
-              <h3 className="font-bold text-teal-900 mb-2 flex items-center gap-2">
-                <Clock className="text-teal-700" size={20} /> Horaires
+              <h3 className="font-bold text-[#40338B] mb-2 flex items-center gap-2">
+                <Clock className="text-[#6F78B9]" size={20} /> Horaires
                 d'Ouverture
               </h3>
-              <div className="text-teal-800 text-sm space-y-1">
+              <div className="text-[#40338B] text-sm space-y-1">
                 <div>Lundi - Vendredi : 8h00 - 19h00</div>
                 <div>Samedi : 9h00 - 13h00</div>
                 <div>Dimanche : Fermé</div>
               </div>
             </div>
-
-            
           </motion.div>
         </div>
       </div>
