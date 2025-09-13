@@ -61,8 +61,8 @@ const galleryImages: GalleryImage[] = [
   // Équipe
   {
     id: '7',
-    src: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    title: 'Dr. Marie Dubois',
+    src: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+    title: 'Dr. Hasnaa El Malki',
     description: 'Médecin généraliste diplômée, 15 ans d\'expérience',
     category: 'staff'
   },

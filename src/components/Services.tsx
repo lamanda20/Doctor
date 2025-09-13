@@ -7,7 +7,9 @@ import {
   Syringe, 
   FileText,
   Clock,
-  Euro
+  Euro,
+  Shield,
+  AlertTriangle
 } from 'lucide-react';
 import './Services.css';
 
@@ -150,17 +152,17 @@ const Services: React.FC = () => {
         <div className="services-info">
           <div className="info-grid">
             <div className="info-item">
-              <h4>🎯 Prise en charge</h4>
+              <h4><Shield className="info-icon" /> Prise en charge</h4>
               <p>Consultations prises en charge par la Sécurité Sociale et votre mutuelle selon les tarifs conventionnés secteur 1.</p>
             </div>
             
             <div className="info-item">
-              <h4>� Horaires</h4>
+              <h4><Clock className="info-icon" /> Horaires</h4>
               <p>Lundi au vendredi : 8h-18h<br />Samedi : 9h-12h<br />Tél. : 01 23 45 67 89</p>
             </div>
             
             <div className="info-item">
-              <h4>� Urgences</h4>
+              <h4><AlertTriangle className="info-icon" /> Urgences</h4>
               <p>En cas d'urgence médicale, contactez le 15 (SAMU) ou rendez-vous aux urgences les plus proches.</p>
             </div>
           </div>

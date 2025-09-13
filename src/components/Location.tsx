@@ -45,7 +45,7 @@ const Location: React.FC = () => {
                   <MapPin className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="map-title">Cabinet Dr. Marie Dubois</h3>
+                  <h3 className="map-title">Cabinet Dr. Hasnaa El Malki</h3>
                   <p className="map-subtitle">Médecine Générale</p>
                 </div>
               </div>
@@ -112,6 +112,7 @@ const Location: React.FC = () => {
                 </div>
                 <div className="schedule-row">
                   <span className="schedule-day">Dimanche</span>
+                  <span className="schedule-time">Fermé</span>
                 </div>
               </div>
             </div>

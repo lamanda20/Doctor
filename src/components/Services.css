@@ -154,6 +154,21 @@
   color: var(--gray-900);
   margin-bottom: var(--spacing-sm);
   font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.info-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff !important;
+  background: #2563eb;
+  border-radius: 50%;
+  padding: 4px;
+  stroke-width: 2;
+  fill: none;
 }
 
 .info-item p {

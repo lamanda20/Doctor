@@ -7,7 +7,7 @@ const About: React.FC = () => {
     <section id="a-propos" className="about section">
       <div className="container">
         <div className="section-header">
-          <h2>À Propos de Dr. Marie Dubois</h2>
+          <h2>À Propos de Dr. Hasnaa El Malki</h2>
           <p>Votre médecin de confiance, à votre écoute depuis plus de 15 ans</p>
         </div>
 
@@ -89,7 +89,7 @@ const About: React.FC = () => {
                 Mon objectif est de vous accompagner dans votre parcours de santé 
                 avec empathie, professionnalisme et expertise."
               </blockquote>
-              <cite>- Dr. Marie Dubois</cite>
+              <cite>- Dr. Hasnaa El Malki</cite>
             </div>
 
             {/* Équipe et localisation fusionnées */}

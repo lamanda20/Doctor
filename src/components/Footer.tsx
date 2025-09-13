@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-section">
             <div className="footer-logo">
-              <h3>Dr. Marie Dubois</h3>
+              <h3>Dr. Hasnaa El Malki</h3>
               <p>Médecin Généraliste</p>
             </div>
             <p className="footer-description">
@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-left">
-            <p>&copy; 2024 Dr. Marie Dubois. Tous droits réservés.</p>
+            <p>&copy; 2024 Dr. Hasnaa El Malki. Tous droits réservés.</p>
             <div className="footer-legal">
               <a href="#mentions">Mentions légales</a>
               <a href="#confidentialite">Politique de confidentialité</a>
