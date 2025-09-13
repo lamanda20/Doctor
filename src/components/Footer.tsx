@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Mail, MapPin, Clock, Shield, Award } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Clock, Shield, Award } from "lucide-react";
 
 const Footer: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -20,8 +20,7 @@ const Footer: React.FC = () => {
               Dr. Hasnaa El Malki
             </h3>
             <p className="text-sm text-[#6F78B9]">
-              Médecin Généraliste. Votre santé est notre priorité. Plus de 15
-              ans d'expérience au service de votre bien-être.
+              Médecin Généraliste. Votre santé est notre priorité. Plus de 5 ans d'expérience au service de votre bien-être.
             </p>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2 text-[#3790B4]">
@@ -39,14 +38,7 @@ const Footer: React.FC = () => {
               Navigation
             </h4>
             <ul className="space-y-2">
-              {[
-                "accueil",
-                "a-propos",
-                "services",
-                "témoignages",
-                "contact",
-                "location",
-              ].map((section) => (
+              {["accueil","a-propos","services","témoignages","contact","location"].map((section) => (
                 <li key={section}>
                   <button
                     onClick={() => scrollToSection(section)}
@@ -83,25 +75,28 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-[#3790B4]" />
                 <span>
-                  123 Avenue de la Santé
-                  <br />
-                  75014 Paris
+                  Immeuble Damou, 1er étage<br/>
+                  Route de Biougra, Av. Mohamed VI, Ait Melloul
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone size={16} className="text-[#3790B4]" />{" "}
-                <span>+33 1 23 45 67 89</span>
+                <Phone size={16} className="text-[#3790B4]" />
+                <span>+212 (0) 5 28 24 11 19</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail size={16} className="text-[#3790B4]" />{" "}
-                <span>contact@dr-dubois.fr</span>
+                <MessageCircle size={16} className="text-[#3790B4]" />
+                <span>WhatsApp: +212 (0) 6 41 23 83 44</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={16} className="text-[#3790B4]" />
+                <span>elmalki.hasnaa@gmail.com</span>
               </div>
               <div className="flex items-start gap-2">
                 <Clock size={16} className="text-[#3790B4]" />
                 <span>
-                  Lun-Ven: 8h-18h
-                  <br />
-                  Sam: 9h-12h
+                  Lun-Ven: 8h00 - 19h00<br/>
+                  Sam: 9h00 - 13h00<br/>
+                  Dim: Fermé
                 </span>
               </div>
             </div>
@@ -113,7 +108,7 @@ const Footer: React.FC = () => {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-1 text-sm text-[#6F78B9]">
           <div className="space-y-1 text-center md:text-left">
-            <p>&copy; 2024 Dr. Hasnaa El Malki. Tous droits réservés.</p>
+            <p>&copy; 2025 Dr. Hasnaa El Malki. Tous droits réservés.</p>
           </div>
         </div>
       </div>

@@ -7,80 +7,51 @@ interface GalleryImage {
   src: string;
   title: string;
   description: string;
-  category: "cabinet" | "equipment" | "staff" | "exterior";
+  category: "cabinet" | "equipment";
 }
 
 const galleryImages: GalleryImage[] = [
   // Cabinet intérieur
   {
     id: "1",
-    src: "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Salle d'attente moderne",
-    description: "Espace accueillant et confortable pour votre arrivée",
+    src: "/bureau-de-reception.png",
+    title: "Bureau de Réception",
+    description:
+      "Accueil chaleureux et professionnel pour vos rendez-vous, informations et orientation au sein du cabinet",
     category: "cabinet",
   },
   {
     id: "2",
-    src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    src: "/salle-de-attente.png",
+    title: "Salle d'attente moderne",
+    description: "Espace accueillant et confortable pour votre arrivée",
+    category: "cabinet",
+  },
+
+  {
+    id: "3",
+    src: "/bureau-de-consultation.png",
     title: "Bureau de consultation",
     description: "Mon espace de travail où je vous reçois en consultation",
     category: "cabinet",
   },
-  {
-    id: "3",
-    src: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Salle d'examen",
-    description: "Salle d'examen équipée selon les standards médicaux",
-    category: "cabinet",
-  },
+  
+
+  
 
   // Équipements
   {
     id: "4",
-    src: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Échographe professionnel",
-    description: "Équipement d'imagerie médicale de dernière génération",
+    src: "/equipement-1.png",
+    title: "Salle d'examen",
+    description: "Salle d'examen équipée selon les standards médicaux",
     category: "equipment",
-  },
-  {
-    id: "5",
-    src: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Électrocardiographe",
-    description: "Monitoring cardiaque haute précision",
-    category: "equipment",
-  },
-  {
-    id: "6",
-    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Station de stérilisation",
-    description: "Respect strict des protocoles d'hygiène et de sécurité",
-    category: "equipment",
-  },
-
-  // Équipe
-  {
-    id: "7",
-    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Dr. Hasnaa El Malki",
-    description: "Médecin généraliste diplômée, 15 ans d'expérience",
-    category: "staff",
-  },
-
-  // Extérieur
-  {
-    id: "8",
-    src: "https://images.unsplash.com/photo-1519452634257-4d8c40e24c77?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    title: "Entrée du cabinet",
-    description: "Accès facilité et locaux modernes en plein Paris 14ème",
-    category: "exterior",
   },
 ];
 
 const categoryLabels = {
   cabinet: "Cabinet",
   equipment: "Équipements",
-  staff: "Équipe",
-  exterior: "Extérieur",
 };
 
 const Gallery: React.FC = () => {

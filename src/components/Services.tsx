@@ -1,13 +1,10 @@
 import React from "react";
 import {
   Stethoscope,
-  Heart,
+  Activity,
+  HeartPulse,
   Baby,
-  Users,
-  Syringe,
-  FileText,
-  Clock,
-  Euro,
+  FileText
 } from "lucide-react";
 
 const Services: React.FC = () => {
@@ -17,73 +14,63 @@ const Services: React.FC = () => {
       name: "Consultation Générale",
       description:
         "Examen médical complet, diagnostic et traitement des pathologies courantes.",
-      duration: 30,
-      price: 25,
       icon: <Stethoscope />,
       features: [
-        "Examen clinique approfondi",
-        "Établissement du diagnostic",
+        "Examen clinique",
+        "Diagnostic personnalisé",
         "Prescription médicale",
         "Conseils préventifs",
       ],
     },
     {
-      id: "suivi-medical",
-      name: "Suivi Médical",
+      id: "echographie",
+      name: "Échographie Générale",
       description:
-        "Suivi régulier des pathologies chroniques et surveillance de l'état de santé.",
-      duration: 20,
-      price: 25,
-      icon: <Heart />,
+        "Exploration médicale par imagerie pour un diagnostic précis.",
+      icon: <Activity />,
       features: [
-        "Suivi des maladies chroniques",
-        "Surveillance des traitements",
-        "Ajustement des posologies",
+        "Échographie abdominale",
+        "Échographie pelvienne",
+        "Échographie thyroïdienne",
+        "Autres examens selon besoin",
+      ],
+    },
+    {
+      id: "diabetologie",
+      name: "Diabétologie",
+      description:
+        "Prise en charge et suivi spécialisé des patients diabétiques.",
+      icon: <HeartPulse />,
+      features: [
+        "Suivi glycémique",
+        "Éducation thérapeutique",
+        "Ajustement du traitement",
         "Prévention des complications",
       ],
     },
     {
-      id: "pediatrie",
-      name: "Pédiatrie",
+      id: "ecg",
+      name: "ECG",
       description:
-        "Soins médicaux spécialisés pour les enfants et adolescents.",
-      duration: 30,
-      price: 25,
+        "Examen électrocardiographique pour analyser l’activité cardiaque.",
+      icon: <Activity />,
+      features: [
+        "Détection des troubles du rythme",
+        "Surveillance cardiaque",
+        "Évaluation préventive",
+        "Rapport détaillé",
+      ],
+    },
+    {
+      id: "grossesse",
+      name: "Suivi de Grossesses",
+      description:
+        "Accompagnement médical complet pour une grossesse sereine.",
       icon: <Baby />,
       features: [
-        "Examens pédiatriques",
-        "Suivi de croissance",
-        "Vaccinations",
-        "Conseils aux parents",
-      ],
-    },
-    {
-      id: "medecine-famille",
-      name: "Médecine de Famille",
-      description:
-        "Prise en charge globale de toute la famille avec une approche personnalisée.",
-      duration: 45,
-      price: 30,
-      icon: <Users />,
-      features: [
-        "Suivi familial complet",
-        "Coordination des soins",
-        "Prévention familiale",
-        "Éducation santé",
-      ],
-    },
-    {
-      id: "vaccinations",
-      name: "Vaccinations",
-      description:
-        "Administration des vaccins obligatoires et recommandés selon le calendrier vaccinal.",
-      duration: 15,
-      price: "Variable",
-      icon: <Syringe />,
-      features: [
-        "Vaccins obligatoires",
-        "Vaccins de voyage",
-        "Rappels vaccinaux",
+        "Consultations prénatales",
+        "Suivi échographique",
+        "Surveillance de la santé maternelle",
         "Conseils personnalisés",
       ],
     },
@@ -91,15 +78,13 @@ const Services: React.FC = () => {
       id: "certificats",
       name: "Certificats Médicaux",
       description:
-        "Établissement de certificats médicaux pour diverses activités et démarches.",
-      duration: 15,
-      price: 20,
+        "Établissement de certificats médicaux pour diverses démarches.",
       icon: <FileText />,
       features: [
+        "Certificats scolaires",
         "Certificats sportifs",
         "Certificats professionnels",
-        "Certificats scolaires",
-        "Autres démarches",
+        "Autres demandes",
       ],
     },
   ];
@@ -113,7 +98,7 @@ const Services: React.FC = () => {
             Services Médicaux
           </h2>
           <p className="text-[#6F78B9] text-lg">
-            Une gamme complète de soins adaptés à vos besoins
+            Des soins adaptés pour répondre à vos besoins de santé
           </p>
         </div>
 
@@ -132,15 +117,6 @@ const Services: React.FC = () => {
                   <h3 className="text-lg font-bold text-[#40338B]">
                     {service.name}
                   </h3>
-                  <div className="flex gap-4 text-sm text-[#6F78B9] mt-1">
-                    <span className="flex items-center gap-1">
-                      <Clock size={14} /> {service.duration} min
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Euro size={14} /> {service.price}
-                      {typeof service.price === "number" ? "€" : ""}
-                    </span>
-                  </div>
                 </div>
               </div>
               <p className="text-[#40338B] text-sm">{service.description}</p>
