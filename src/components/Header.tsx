@@ -90,25 +90,35 @@ const Navbar: React.FC = () => {
           className="flex justify-between items-center h-20"
           aria-label="Navigation principale"
         >
-          {/* Logo + name */}
+          {/* Logo + name avec disposition bilingue */}
           <div className="flex items-center gap-4">
-            <img
-              src="/logo.png"
-              alt="Dr. Hasnaa El Malki"
-              className="w-12 h-12 rounded-full object-cover border-2 border-[#3790B4]"
-            />
+            {/* Texte français à gauche */}
             <button
               onClick={() => scrollToSection("accueil")}
               className="text-left"
               aria-label="Aller à l'accueil"
             >
-              <h3 className="text-lg sm:text-2xl font-bold text-[#6F78B9] leading-none">
-                Dr. Hasnaa El Malki
+              <h3 className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">
+                CABINET MÉDICAL
               </h3>
               <span className="text-xs sm:text-sm font-medium text-[#3790B4]">
-                Médecin Généraliste
+                Dr. HASNAA EL MALKI
               </span>
             </button>
+            
+            {/* Logo au milieu (original) */}
+            <img
+              src="/logo.png"
+              alt="Dr. Hasnaa El Malki"
+              className="w-12 h-12 object-cover bg-transparent mix-blend-multiply"
+              style={{ backgroundColor: 'transparent' }}
+            />
+            
+            {/* Texte arabe à droite */}
+            <div className="hidden sm:block text-right" dir="rtl">
+              <p className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">عيادة طبية</p>
+              <p className="text-xs sm:text-sm font-medium text-[#3790B4]">الدكتورة حسناء الملكي</p>
+            </div>
           </div>
 
           {/* Desktop nav links */}
