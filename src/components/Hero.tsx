@@ -148,7 +148,9 @@ const Hero: React.FC = () => {
                 <span className="text-xs text-[#6F78B9]">Années</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-[#40338B] font-bold text-xl">20,000+</span>
+                <span className="text-[#40338B] font-bold text-xl">
+                  20,000+
+                </span>
                 <span className="text-xs text-[#6F78B9]">Patients</span>
               </div>
             </div>
@@ -201,7 +203,7 @@ const Hero: React.FC = () => {
       )}
 
       {showBackToTop && (
-        <div className="fixed bottom-8 right-8 z-50">
+        <div className="fixed bottom-24 right-8 sm:bottom-28 lg:bottom-8 z-50">
           <button
             onClick={scrollToTop}
             className="bg-gradient-to-br from-[#3790B4] to-[#6F78B9] text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#3790B4] focus:ring-offset-2"
