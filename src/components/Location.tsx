@@ -122,7 +122,7 @@ const Location: React.FC = () => {
                 <Clock className="text-[#6F78B9]" size={18} /> Horaires
               </h3>
               <div className="text-[#40338B] text-xs space-y-0.5">
-                <div>Lun - Ven : 8h00 - 19h00</div>
+                <div>Lun - Ven : 8h30 - 16h00</div>
                 <div>Sam : 9h00 - 13h00</div>
                 <div>Dim : Fermé</div>
               </div>

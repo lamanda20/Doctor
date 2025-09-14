@@ -58,6 +58,8 @@ const Navbar: React.FC = () => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
+      // Mettre à jour l'URL avec le hash
+      window.history.replaceState(null, "", `#${id}`);
     }
   };
 

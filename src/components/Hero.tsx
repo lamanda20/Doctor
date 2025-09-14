@@ -148,7 +148,7 @@ const Hero: React.FC = () => {
                 <span className="text-xs text-[#6F78B9]">Années</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-[#40338B] font-bold text-xl">1000+</span>
+                <span className="text-[#40338B] font-bold text-xl">20,000+</span>
                 <span className="text-xs text-[#6F78B9]">Patients</span>
               </div>
             </div>

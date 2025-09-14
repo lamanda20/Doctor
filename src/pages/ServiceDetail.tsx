@@ -87,7 +87,12 @@ const ServiceDetail: React.FC = () => {
             <ArrowLeft size={14} /> Accueil
           </Link>
           <span className="text-[#6F78B9] text-xs">/</span>
-          <span className="text-[#6F78B9] text-xs">Services</span>
+          <Link
+            to="/#services"
+            className="text-[#3790B4] text-xs font-medium hover:underline"
+          >
+            Services
+          </Link>
           <span className="text-[#6F78B9] text-xs">/</span>
           <span className="text-[#40338B] text-xs font-semibold">
             {service.name}
