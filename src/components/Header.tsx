@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react"; 
+import { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
@@ -8,6 +9,8 @@ const Navbar: React.FC = () => {
   const firstMenuButtonRef = useRef<HTMLButtonElement | null>(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -16,7 +19,13 @@ const Navbar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const sectionIds = ["accueil", "a-propos", "services", "gallery", "location"];
+    const sectionIds = [
+      "accueil",
+      "a-propos",
+      "services",
+      "gallery",
+      "location",
+    ];
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -33,11 +42,14 @@ const Navbar: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (isMenuOpen && firstMenuButtonRef.current) firstMenuButtonRef.current.focus();
+    if (isMenuOpen && firstMenuButtonRef.current)
+      firstMenuButtonRef.current.focus();
   }, [isMenuOpen]);
 
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setIsMenuOpen(false); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsMenuOpen(false);
+    };
     if (isMenuOpen) document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [isMenuOpen]);
@@ -46,8 +58,17 @@ const Navbar: React.FC = () => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
     }
+  };
+
+  // Unified nav handler: if we're not on home route, navigate there with hash so ScrollToHash in App handles smooth scroll
+  const handleNavClick = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+    } else {
+      scrollToSection(id);
+    }
+    setIsMenuOpen(false);
   };
 
   const navLinks = [
@@ -67,16 +88,35 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
-        <nav className="flex justify-between items-center h-20" aria-label="Navigation principale">
+        <nav
+          className="flex justify-between items-center h-20"
+          aria-label="Navigation principale"
+        >
           <div className="flex items-center gap-4">
-            <button onClick={() => scrollToSection("accueil")} className="text-left" aria-label="Aller à l'accueil">
-              <h3 className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">CABINET MÉDICAL</h3>
-              <span className="text-xs sm:text-sm font-medium text-[#3790B4]">Dr. HASNAA EL MALKI</span>
+            <button
+              onClick={() => handleNavClick("accueil")}
+              className="text-left"
+              aria-label="Aller à l'accueil"
+            >
+              <h3 className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">
+                CABINET MÉDICAL
+              </h3>
+              <span className="text-xs sm:text-sm font-medium text-[#3790B4]">
+                Dr. HASNAA EL MALKI
+              </span>
             </button>
-            <img src="/logo.png" alt="Dr. Hasnaa El Malki" className="w-12 h-12 object-cover bg-transparent mix-blend-multiply" />
+            <img
+              src="/logo.png"
+              alt="Dr. Hasnaa El Malki"
+              className="w-12 h-12 object-cover bg-transparent mix-blend-multiply"
+            />
             <div className="hidden sm:block text-right" dir="rtl">
-              <p className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">عيادة طبية</p>
-              <p className="text-xs sm:text-sm font-medium text-[#3790B4]">الدكتورة حسناء الملكي</p>
+              <p className="text-sm sm:text-lg font-bold text-[#6F78B9] leading-none">
+                عيادة طبية
+              </p>
+              <p className="text-xs sm:text-sm font-medium text-[#3790B4]">
+                الدكتورة حسناء الملكي
+              </p>
             </div>
           </div>
           <div className="hidden lg:flex items-center gap-6">
@@ -85,14 +125,25 @@ const Navbar: React.FC = () => {
               return (
                 <button
                   key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className={`relative font-medium transition-colors duration-200 px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4] rounded ${
-                    isActive ? "text-[#3790B4]" : "text-[#6F78B9] hover:text-[#3790B4]"
+                  onClick={() => handleNavClick(link.id)}
+                  className={`group relative font-medium transition-colors duration-200 px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4] rounded cursor-pointer ${
+                    isActive
+                      ? "text-[#3790B4]"
+                      : "text-[#6F78B9] hover:text-[#3790B4]"
                   }`}
                   aria-current={isActive ? "page" : undefined}
                 >
-                  {link.name}
-                  {isActive && <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#3790B4] rounded" aria-hidden="true" />}
+                  <span className="inline-block transition-transform duration-200 group-hover:scale-105">
+                    {link.name}
+                  </span>
+                  <span
+                    className={`pointer-events-none absolute -bottom-1 left-0 h-0.5 rounded bg-[#3790B4] transition-all duration-300 ease-out ${
+                      isActive
+                        ? "w-full opacity-100"
+                        : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+                    }`}
+                    aria-hidden="true"
+                  />
                 </button>
               );
             })}
@@ -118,10 +169,12 @@ const Navbar: React.FC = () => {
             {navLinks.map((link, index) => (
               <button
                 key={link.id}
-                onClick={() => scrollToSection(link.id)}
+                onClick={() => handleNavClick(link.id)}
                 ref={index === 0 ? firstMenuButtonRef : null}
                 className={`text-left font-medium py-2 px-2 rounded transition-colors duration-200 ${
-                  activeSection === link.id ? "text-[#3790B4]" : "text-[#6F78B9] hover:text-[#3790B4]"
+                  activeSection === link.id
+                    ? "text-[#3790B4]"
+                    : "text-[#6F78B9] hover:text-[#3790B4]"
                 }`}
               >
                 {link.name}
