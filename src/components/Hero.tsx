@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
 
             <div className="flex gap-6  justify-center">
               <div className="flex flex-col items-center">
-                <span className="text-[#40338B] font-bold text-xl">5+</span>
+                <span className="text-[#40338B] font-bold text-xl">15+</span>
                 <span className="text-xs text-[#6F78B9]">Années</span>
               </div>
               <div className="flex flex-col items-center">

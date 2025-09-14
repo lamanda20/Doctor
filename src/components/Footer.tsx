@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               Dr. Hasnaa El Malki
             </h3>
             <p className="text-xs text-[#6F78B9] leading-relaxed">
-              Médecin Généraliste. Votre santé est notre priorité. Plus de 5 ans
+              Médecin Généraliste. Votre santé est notre priorité. Plus de 15 ans
               d'expérience au service de votre bien-être.
             </p>
             <div className="flex flex-col gap-1.5">
@@ -53,7 +53,6 @@ const Footer: React.FC = () => {
                 "services",
                 "témoignages",
                 "contact",
-                "location",
               ].map((section) => (
                 <li key={section}>
                   <button
