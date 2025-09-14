@@ -86,7 +86,7 @@ const About: React.FC = () => {
             {/* Statistics */}
             <div className="flex justify-center gap-6 ">
               <div className="flex flex-col items-center">
-                <span className="text-xl font-bold text-[#40338B]">5+</span>
+                <span className="text-xl font-bold text-[#40338B]">15+</span>
                 <span className="text-[#6F78B9] text-xs">Années</span>
               </div>
               <div className="flex flex-col items-center">

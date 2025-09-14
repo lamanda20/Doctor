@@ -45,6 +45,14 @@ const Testimonials: React.FC = () => {
       date: "2025-08-13",
       verified: true,
     },
+    {
+      id: "6",
+      patientName: "Gh Driss",
+      rating: 5,
+      comment:"Médecin professionnelle. Toujours à l'écoute, elle assure un bon suivi.",
+      date: "2025-09-13",
+      verified: true,
+    },
   ];
 
   const renderStars = (rating: number) => {
