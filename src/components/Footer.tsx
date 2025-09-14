@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start gap-2">
                 <Clock size={14} className="text-[#3790B4]" />
                 <span>
-                  Lun-Ven: 8h00 - 19h00
+                  Lun-Ven: 8h30 - 16h00
                   <br />
                   Sam: 9h00 - 13h00
                   <br />

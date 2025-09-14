@@ -90,7 +90,7 @@ const About: React.FC = () => {
                 <span className="text-[#6F78B9] text-xs">Années</span>
               </div>
               <div className="flex flex-col items-center">
-                <span className="text-xl font-bold text-[#40338B]">1000+</span>
+                <span className="text-xl font-bold text-[#40338B]">20,000+</span>
                 <span className="text-[#6F78B9] text-xs">Patients</span>
               </div>
               <div className="flex flex-col items-center">
