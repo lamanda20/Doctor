@@ -71,19 +71,19 @@ const Gallery: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-1">
             Notre Cabinet en Images
           </h2>
-          <p className="text-[#6F78B9] text-lg">
+          <p className="text-[#6F78B9] text-base max-w-2xl mx-auto">
             Découvrez notre environnement professionnel, nos équipements
             modernes et notre équipe dévouée
           </p>
         </motion.div>
 
         {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-8">
           <button
             onClick={() => setFilter("all")}
             className={`px-4 py-2 rounded-full border transition ${
@@ -115,25 +115,27 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {filteredImages.map((image, index) => (
             <motion.div
               key={image.id}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative cursor-pointer group overflow-hidden rounded-xl shadow-lg"
+              className="relative cursor-pointer group overflow-hidden rounded-xl shadow-md"
               onClick={() => setSelectedImage(image)}
             >
               <img
                 src={image.src}
                 alt={image.title}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
               />
-              <div className="absolute inset-0 bg-[#40338B]/50 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-4 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-[#40338B]/50 opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-center p-3 transition-opacity duration-300">
                 <ZoomIn className="text-white mb-2" size={24} />
                 <h4 className="text-white font-semibold">{image.title}</h4>
-                <p className="text-white text-sm">{image.description}</p>
+                <p className="text-white text-xs leading-snug">
+                  {image.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -146,36 +148,36 @@ const Gallery: React.FC = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-[#40338B]/80 z-50 flex justify-center items-center p-4"
+              className="fixed inset-0 bg-[#40338B]/80 z-50 flex justify-center items-center p-3"
               onClick={() => setSelectedImage(null)}
             >
               <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
+                initial={{ scale: 0.85, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                className="bg-white rounded-2xl overflow-hidden max-w-3xl w-full relative shadow-xl"
+                exit={{ scale: 0.85, opacity: 0 }}
+                className="bg-white rounded-2xl overflow-hidden max-w-2xl w-full relative shadow-xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 text-[#40338B] hover:text-[#6F78B9] transition"
+                  className="absolute top-3 right-3 text-[#40338B] hover:text-[#6F78B9] transition"
                 >
                   <X size={28} />
                 </button>
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.title}
-                  className="w-full h-96 object-cover"
+                  className="w-full h-80 object-cover"
                 />
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-[#3790B4] mb-2">
+                <div className="p-5">
+                  <div className="flex items-center gap-2 text-[#3790B4] mb-1">
                     <Camera size={16} />
                     <span>{categoryLabels[selectedImage.category]}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-[#40338B] mb-2">
+                  <h3 className="text-lg font-bold text-[#40338B] mb-1">
                     {selectedImage.title}
                   </h3>
-                  <p className="text-[#40338B] text-sm">
+                  <p className="text-[#40338B] text-xs leading-relaxed">
                     {selectedImage.description}
                   </p>
                 </div>

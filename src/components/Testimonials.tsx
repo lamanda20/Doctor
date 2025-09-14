@@ -3,51 +3,49 @@ import { Star, Quote, CheckCircle } from "lucide-react";
 
 const Testimonials: React.FC = () => {
   const testimonials = [
-  {
-    id: "1",
-    patientName: "Ziyad Grm",
-    rating: 5,
-    comment:
-      "Médecin très attentive, professionnelle et humaine. Elle prend le temps d'expliquer clairement et de rassurer ses patients. Je recommande sans hésitation.",
-    date: "2025-08-13",
-    verified: true,
-  },
-  {
-    id: "2",
-    patientName: "Taha GHADI",
-    rating: 5,
-    comment:
-      "Médecin compétente et très attentive. Explique bien, rassure le patient et fait preuve d'un grand professionnalisme. Je recommande vivement.",
-    date: "2025-09-12",
-    verified: true,
-  },
-  {
-    id: "3",
-    patientName: "Ghadi Rachid",
-    rating: 5,
-    comment:
-      "Nouveau patient, très satisfait du suivi et de l'écoute.",
-    date: "2025-09-13",
-    verified: true,
-  },
-  {
-    id: "4",
-    patientName: "Rayan El Malki",
-    rating: 5,
-    comment: "Excellent suivi et très professionnel. Je recommande !",
-    date: "2025-08-13",
-    verified: true,
-  },
-  {
-    id: "5",
-    patientName: "Mohamad Atbir",
-    rating: 5,
-    comment: "Médecin compétente et attentive. Très bon suivi.",
-    date: "2025-08-13",
-    verified: true,
-  },
-];
-
+    {
+      id: "1",
+      patientName: "Ziyad Grm",
+      rating: 5,
+      comment:
+        "Médecin très attentive, professionnelle et humaine. Elle prend le temps d'expliquer clairement et de rassurer ses patients. Je recommande sans hésitation.",
+      date: "2025-08-13",
+      verified: true,
+    },
+    {
+      id: "2",
+      patientName: "Taha GHADI",
+      rating: 5,
+      comment:
+        "Médecin compétente et très attentive. Explique bien, rassure le patient et fait preuve d'un grand professionnalisme. Je recommande vivement.",
+      date: "2025-09-12",
+      verified: true,
+    },
+    {
+      id: "3",
+      patientName: "Ghadi Rachid",
+      rating: 5,
+      comment: "Nouveau patient, très satisfait du suivi et de l'écoute.",
+      date: "2025-09-13",
+      verified: true,
+    },
+    {
+      id: "4",
+      patientName: "Rayan El Malki",
+      rating: 5,
+      comment: "Excellent suivi et très professionnel. Je recommande !",
+      date: "2025-08-13",
+      verified: true,
+    },
+    {
+      id: "5",
+      patientName: "Mohamad Atbir",
+      rating: 5,
+      comment: "Médecin compétente et attentive. Très bon suivi.",
+      date: "2025-08-13",
+      verified: true,
+    },
+  ];
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, index) => (
@@ -67,28 +65,28 @@ const Testimonials: React.FC = () => {
       aria-labelledby="testimonials-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
+        <div className="mb-8 text-center">
           <h2
             id="testimonials-heading"
-            className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-2"
+            className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-1"
           >
             Témoignages Patients
           </h2>
-          <p className="text-[#6F78B9] text-lg">
+          <p className="text-[#6F78B9] text-base">
             Ce que disent nos patients de leur expérience
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-4">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white rounded-xl shadow p-6 flex flex-col gap-3"
+              className="bg-white rounded-xl shadow p-5 flex flex-col gap-2.5"
             >
               <div className="flex items-center gap-4 mb-2">
                 <Quote className="text-[#3790B4]" size={24} />
                 <div>
-                  <h4 className="text-base font-bold text-[#40338B] mb-1">
+                  <h4 className="text-sm font-bold text-[#40338B] mb-0.5">
                     {testimonial.patientName}
                   </h4>
                   <div className="flex gap-1 text-yellow-400">
@@ -102,7 +100,7 @@ const Testimonials: React.FC = () => {
                   </div>
                 )}
               </div>
-              <p className="italic text-[#6F78B9] text-sm mb-2">
+              <p className="italic text-[#6F78B9] text-xs mb-1.5 leading-relaxed">
                 "{testimonial.comment}"
               </p>
               <div className="text-xs text-[#6F78B9] text-right">
