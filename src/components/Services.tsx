@@ -1,92 +1,24 @@
 import React from "react";
+import type { ReactElement } from "react";
+import { Link } from "react-router-dom";
 import {
   Stethoscope,
   Activity,
   HeartPulse,
   Baby,
   FileText,
+  ArrowRight,
 } from "lucide-react";
+import { services } from "../data/services";
 
 const Services: React.FC = () => {
-  const services = [
-    {
-      id: "consultation-generale",
-      name: "Consultation Générale",
-      description:
-        "Examen médical complet, diagnostic et traitement des pathologies courantes.",
-      icon: <Stethoscope />,
-      features: [
-        "Examen clinique",
-        "Diagnostic personnalisé",
-        "Prescription médicale",
-        "Conseils préventifs",
-      ],
-    },
-    {
-      id: "echographie",
-      name: "Échographie Générale",
-      description:
-        "Exploration médicale par imagerie pour un diagnostic précis.",
-      icon: <Activity />,
-      features: [
-        "Échographie abdominale",
-        "Échographie pelvienne",
-        "Échographie thyroïdienne",
-        "Autres examens selon besoin",
-      ],
-    },
-    {
-      id: "diabetologie",
-      name: "Diabétologie",
-      description:
-        "Prise en charge et suivi spécialisé des patients diabétiques.",
-      icon: <HeartPulse />,
-      features: [
-        "Suivi glycémique",
-        "Éducation thérapeutique",
-        "Ajustement du traitement",
-        "Prévention des complications",
-      ],
-    },
-    {
-      id: "ecg",
-      name: "ECG",
-      description:
-        "Examen électrocardiographique pour analyser l’activité cardiaque.",
-      icon: <Activity />,
-      features: [
-        "Détection des troubles du rythme",
-        "Surveillance cardiaque",
-        "Évaluation préventive",
-        "Rapport détaillé",
-      ],
-    },
-    {
-      id: "grossesse",
-      name: "Suivi de Grossesses",
-      description: "Accompagnement médical complet pour une grossesse sereine.",
-      icon: <Baby />,
-      features: [
-        "Consultations prénatales",
-        "Suivi échographique",
-        "Surveillance de la santé maternelle",
-        "Conseils personnalisés",
-      ],
-    },
-    {
-      id: "certificats",
-      name: "Certificats Médicaux",
-      description:
-        "Établissement de certificats médicaux pour diverses démarches.",
-      icon: <FileText />,
-      features: [
-        "Certificats scolaires",
-        "Certificats sportifs",
-        "Certificats professionnels",
-        "Autres demandes",
-      ],
-    },
-  ];
+  const iconMap: Record<string, ReactElement> = {
+    stethoscope: <Stethoscope size={20} />,
+    activity: <Activity size={20} />,
+    heartpulse: <HeartPulse size={20} />,
+    baby: <Baby size={20} />,
+    filetext: <FileText size={20} />,
+  };
 
   return (
     <section
@@ -109,26 +41,33 @@ const Services: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-white rounded-xl shadow-md p-5 flex flex-col gap-3.5 hover:shadow-lg transition"
+              className="group bg-white rounded-xl shadow-md p-5 flex flex-col gap-3 hover:shadow-lg transition border border-transparent hover:border-[#3790B4]/30"
             >
               <div className="flex items-center gap-4">
-                <div className="bg-[#3790B4]/20 text-[#3790B4] rounded-full p-3">
-                  {React.cloneElement(service.icon, { size: 20 })}
+                <div className="bg-[#3790B4]/15 text-[#3790B4] rounded-full p-3">
+                  {iconMap[service.icon]}
                 </div>
-                <div>
-                  <h3 className="text-base font-bold text-[#40338B]">
-                    {service.name}
-                  </h3>
-                </div>
+                <h3 className="text-sm font-bold text-[#40338B]">
+                  {service.name}
+                </h3>
               </div>
-              <p className="text-[#40338B] text-xs leading-relaxed">
-                {service.description}
+              <p className="text-[#40338B] text-[11px] leading-relaxed flex-1">
+                {service.short}
               </p>
-              <ul className="list-disc list-inside text-[#40338B] text-xs space-y-1">
-                {service.features.map((feature, idx) => (
-                  <li key={idx}>{feature}</li>
+              <ul className="list-disc list-inside text-[#40338B] text-[11px] space-y-0.5 mb-1">
+                {service.features.slice(0, 3).map((f) => (
+                  <li key={f}>{f}</li>
                 ))}
               </ul>
+              <div>
+                <Link
+                  to={`/services/${service.id}`}
+                  className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#3790B4] hover:text-[#2d7490] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4] rounded"
+                  aria-label={`En savoir plus sur ${service.name}`}
+                >
+                  En savoir plus <ArrowRight size={12} />
+                </Link>
+              </div>
             </div>
           ))}
         </div>
