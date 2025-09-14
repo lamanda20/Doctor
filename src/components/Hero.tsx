@@ -9,24 +9,19 @@ import {
   Mail,
   MapPin,
   MessageCircle,
-  ChevronUp,
 } from "lucide-react";
 
 const Hero: React.FC = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
-  const [showBackToTop, setShowBackToTop] = useState(false);
 
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollIndicator(window.scrollY <= 50);
-      setShowBackToTop(window.scrollY > 300);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -202,17 +197,7 @@ const Hero: React.FC = () => {
         </div>
       )}
 
-      {showBackToTop && (
-        <div className="fixed bottom-24 right-8 sm:bottom-28 lg:bottom-8 z-50">
-          <button
-            onClick={scrollToTop}
-            className="bg-gradient-to-br from-[#3790B4] to-[#6F78B9] text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#3790B4] focus:ring-offset-2"
-            aria-label="Retour en haut"
-          >
-            <ChevronUp size={24} />
-          </button>
-        </div>
-      )}
+      {/* Back to top button moved to global FloatingButtons component */}
     </section>
   );
 };

@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import WhatsAppButton from "./components/WhatsAppButton";
+import FloatingButtons from "./components/FloatingButtons";
 import Home from "./pages/Home";
 import ServiceDetail from "./pages/ServiceDetail";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
@@ -34,7 +34,7 @@ function App() {
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
-      <WhatsAppButton />
+      <FloatingButtons />
     </div>
   );
 }
