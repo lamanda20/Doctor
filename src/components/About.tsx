@@ -29,17 +29,19 @@ const About: React.FC = () => {
           {/* Left: Description + Diplômes & Compétences */}
           <div className="flex-1">
             <p className="text-[#40338B] mb-3 leading-relaxed text-sm sm:text-base">
-              Dr. Hasnaa El Malki est diplômée de la Faculté de Médecine et de
-              Pharmacie de Casablanca en médecine générale. Elle a complété des
-              formations spécialisées en échographie générale à la Faculté de
-              Médecine de Marrakech et en diabétologie à l'Université Paris 13.
+              Dr Hasnaa El Malki est titulaire d'un diplôme en médecine générale de
+              la Faculté de Médecine et de Pharmacie de Casablanca.
+              Elle a par la suite approfondi ses compétences par des formations spécialisées en
+              échographie générale à la Faculté de Médecine de Marrakech et en diabétologie à
+              l'Université Paris 13.
+              Son exercice clinique englobe le suivi prénatal des grossesses et la prise en charge des
+              pathologies courantes.
             </p>
 
             <p className="text-[#40338B] mb-4 leading-relaxed text-sm sm:text-base">
-              Son activité clinique comprend la réalisation d'ECG, le suivi de
-              grossesses et la prise en charge des pathologies courantes avec un
-              accent sur la prévention et le suivi personnalisé des patients.
-              Elle associe rigueur clinique et accompagnement humain.
+              Son activité clinique comprend le suivi de grossesses et la prise en charge
+              des pathologies courantes avec un accent sur la prévention et le suivi personnalisé
+              des patients. Elle associe rigueur clinique et accompagnement humain.
             </p>
 
             <div className="bg-white rounded-2xl shadow-md p-4 mb-5">
@@ -62,7 +64,7 @@ const About: React.FC = () => {
                       Diplôme en Échographie Générale - Faculté de Médecine de
                       Marrakech
                     </li>
-                    <li>Diplôme en Diabétologie - Université Paris 13</li>
+                    <li className="whitespace-nowrap">Diplôme en Diabétologie - Université Paris 13</li>
                   </ul>
                 </div>
 
@@ -71,7 +73,7 @@ const About: React.FC = () => {
                     Compétences cliniques
                   </h5>
                   <ul className="list-disc list-inside text-[#40338B] text-xs space-y-3">
-                    <li>Interprétation et réalisation d'ECG</li>
+                    { /* <li>Interprétation et réalisation d'ECG</li> */}
                     <li>Suivi de grossesses</li>
                     <li>Prise en charge en médecine générale et prévention</li>
                     <li>Échographie diagnostique</li>
@@ -84,7 +86,7 @@ const About: React.FC = () => {
           {/* Right: Stats, philosophie, cabinet & contact */}
           <div className="flex-1 flex flex-col gap-6">
             {/* Statistics */}
-            <div className="flex justify-center gap-6 ">
+            {/* <div className="flex justify-center gap-6 ">
               <div className="flex flex-col items-center">
                 <span className="text-xl font-bold text-[#40338B]">15+</span>
                 <span className="text-[#6F78B9] text-xs">Années</span>
@@ -97,7 +99,7 @@ const About: React.FC = () => {
                 <span className="text-xl font-bold text-[#40338B]">100%</span>
                 <span className="text-[#6F78B9] text-xs">Satisfaction</span>
               </div>
-            </div>
+            </div> */}
 
             {/* Philosophy */}
             <div className="bg-white rounded-2xl shadow-md p-5">
@@ -110,7 +112,7 @@ const About: React.FC = () => {
                 rigoureux. »
               </blockquote>
               <cite className="text-[#3790B4] block mt-1 text-xs">
-                — Dr. Hasnaa El Malki
+                Dr. Hasnaa El Malki
               </cite>
             </div>
 

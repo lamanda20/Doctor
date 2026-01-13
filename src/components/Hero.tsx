@@ -48,9 +48,13 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-[#40338B]/90 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
-            Médecin généraliste diplômée au Maroc et à l'international,
-            spécialisée en échographie et diabétologie. Offrant des soins de
-            qualité et un suivi personnalisé pour toute la famille.
+            Dr. Hasnaa EL Malki, Médecin généraliste dédiée à votre santé.
+            Diplômée de la Faculté de Médecine et de Pharmacie de Casablanca,
+            Docteur Hasnaa EL Malki est un médecin généraliste expérimentée, spécialisée en
+            échographie et en diabétologie. Avec une formation rigoureuse et une pratique
+            clinique enrichie par des années d'exercice, elle s'engage à offrir des soins de haute
+            qualité, alliant expertise médicale et écoute attentive.
+
           </p>
 
           {/* Features Cards */}
@@ -87,14 +91,14 @@ const Hero: React.FC = () => {
                 Approche humaine
               </span>
             </div>
-            <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-4 transition-all hover:shadow-md hover:-translate-y-1">
+            {/* <div className="flex flex-col items-center justify-center bg-white rounded-xl shadow-sm p-4 transition-all hover:shadow-md hover:-translate-y-1">
               <div className="bg-[#3790B4]/10 p-2 rounded-full mb-2">
                 <Award className="text-[#3790B4]" size={20} strokeWidth={2} />
               </div>
               <span className="text-[#40338B] text-xs text-center font-medium">
                 Diplômée spécialisée
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* CTA Buttons */}
@@ -134,10 +138,10 @@ const Hero: React.FC = () => {
               Dr. Hasnaa El Malki
             </h3>
             <p className="text-sm text-[#6F78B9] mb-2 text-center">
-              Médecin Généraliste • Agadir, Ait Melloul
+              Médecin Généraliste à  Ait Melloul
             </p>
 
-            <div className="flex gap-6  justify-center">
+            {/* } <div className="flex gap-6  justify-center">
               <div className="flex flex-col items-center">
                 <span className="text-[#40338B] font-bold text-xl">15+</span>
                 <span className="text-xs text-[#6F78B9]">Années</span>
@@ -148,7 +152,7 @@ const Hero: React.FC = () => {
                 </span>
                 <span className="text-xs text-[#6F78B9]">Patients</span>
               </div>
-            </div>
+            </div>*/}
 
             <div className="w-full border-t border-[#3790B4]/20 my-3"></div>
 
