@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   Calendar,
   Shield,
-  Award,
   Users,
   Stethoscope,
   Phone,
