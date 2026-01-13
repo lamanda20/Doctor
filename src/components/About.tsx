@@ -130,7 +130,7 @@ const About: React.FC = () => {
                     <br />
                     Route de Biougra, Av. Mohamed VI
                     <br />
-                    Ait Melloul, Agadir
+                    Ait Melloul
                   </span>
                 </div>
 

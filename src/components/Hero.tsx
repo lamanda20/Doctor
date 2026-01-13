@@ -47,10 +47,8 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-[#40338B]/90 mb-8 leading-relaxed max-w-2xl mx-auto md:mx-0">
-            Dr. Hasnaa EL Malki, Médecin généraliste dédiée à votre santé.
-            Diplômée de la Faculté de Médecine et de Pharmacie de Casablanca,
-            Docteur Hasnaa EL Malki est un médecin généraliste expérimentée, spécialisée en
-            échographie et en diabétologie. Avec une formation rigoureuse et une pratique
+            Diplômée de la Faculté de Médecine et de Pharmacie de Casablanca,docteur Hasnaa EL Malki est
+            un médecin généraliste expérimentée, spécialisée en échographie et en diabétologie. Avec une formation rigoureuse et une pratique
             clinique enrichie par des années d'exercice, elle s'engage à offrir des soins de haute
             qualité, alliant expertise médicale et écoute attentive.
 
