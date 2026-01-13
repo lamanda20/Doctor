@@ -19,10 +19,10 @@ const About: React.FC = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#40338B] mb-1">
             À Propos de Dr. Hasnaa El Malki
           </h2>
-          <p className="text-[#6F78B9] text-base">
+          {/* <p className="text-[#6F78B9] text-base">
             Médecin généraliste diplômée, spécialisée en échographie générale et
             diabétologie.
-          </p>
+          </p> */}
         </div>
 
         <div className="flex flex-col lg:flex-row gap-5 lg:gap-14">
