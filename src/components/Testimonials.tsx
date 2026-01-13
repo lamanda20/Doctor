@@ -104,8 +104,9 @@ const Testimonials: React.FC = () => {
   return (
     <section
       id="témoignages"
-      className="w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-20"
+      className="hidden w-full bg-[#3790B4]/5 pt-0 pb-10 scroll-mt-20"
       aria-labelledby="testimonials-heading"
+      aria-hidden="true"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8 text-center">

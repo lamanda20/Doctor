@@ -34,15 +34,16 @@ const About: React.FC = () => {
               Elle a par la suite approfondi ses compétences par des formations spécialisées en
               échographie générale à la Faculté de Médecine de Marrakech et en diabétologie à
               l'Université Paris 13.
-              Son exercice clinique englobe le suivi prénatal des grossesses et la prise en charge des
-              pathologies courantes.
+              Son exercice clinique, marqué par une expertise approfondie, englobe un suivi
+              prénatal minutieux des grossesses à tous les stades, une prise en charge personnalisée
+              du diabète et de l'infertilité, ainsi que le diagnostic et le traitement des pathologies courantes.
             </p>
 
-            <p className="text-[#40338B] mb-4 leading-relaxed text-sm sm:text-base">
+            {/* <p className="text-[#40338B] mb-4 leading-relaxed text-sm sm:text-base">
               Son activité clinique comprend le suivi de grossesses et la prise en charge
               des pathologies courantes avec un accent sur la prévention et le suivi personnalisé
               des patients. Elle associe rigueur clinique et accompagnement humain.
-            </p>
+            </p> */}
 
             <div className="bg-white rounded-2xl shadow-md p-4 mb-5">
               <h4 className="text-base font-bold text-[#40338B] mb-3 flex items-center gap-2">

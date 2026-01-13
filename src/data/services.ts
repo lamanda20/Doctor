@@ -46,8 +46,9 @@ export const services: ServiceItem[] = [
     features: [
       "Abdominale",
       "Pelvienne",
+      "Obstétricale",
       "Thyroïdienne",
-      "Suivi orienté clinique",
+      "Mammaire",
     ],
     long: "L'échographie est un examen indolore utilisant les ultrasons.",
     paragraphs: [
@@ -135,7 +136,7 @@ export const services: ServiceItem[] = [
     name: "Certificats Médicaux",
     short: "Documents officiels validés.",
     icon: "filetext",
-    features: ["Scolaires", "Sportifs", "Professionnels", "Autres demandes"],
+    features: ["Scolaires", "Mariages", "Professionnels", "Autres demandes"],
     long: "Les certificats médicaux attestent d'une aptitude ou d'un état de santé.",
     paragraphs: [
       "Les certificats médicaux attestent d'une aptitude ou d'un état de santé pour la pratique d'une activité: sport, scolarité, emploi ou démarches administratives.",
