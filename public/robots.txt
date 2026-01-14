@@ -1,0 +1,10 @@
+# robots.txt neutralisé – modifié pour annuler les changements SEO
+# Si vous souhaitez restaurer un robots.txt, remplacez ce contenu par les règles souhaitées.
+
+User-agent: *
+Allow: /
+Sitemap: https://www.cmhe.ma/sitemap.xml
+
+# If you have private paths, add Disallow lines below
+# Disallow: /admin
+# Disallow: /api

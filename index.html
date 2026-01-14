@@ -21,7 +21,7 @@
     />
     <meta name="author" content="Cabinet Dr Hasnaa El Malki" />
     <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="%VITE_SITE_URL%/" />
+    <link rel="canonical" href="https://www.cmhe.ma/" />
 
     <!-- Open Graph -->
     <meta property="og:locale" content="fr_FR" />
@@ -34,9 +34,9 @@
       property="og:description"
       content="Consultations, échographie générale, diabétologie, ECG et suivi médical personnalisé à Ait Melloul."
     />
-    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:url" content="https://www.cmhe.ma/" />
     <meta property="og:site_name" content="Cabinet Dr Hasnaa El Malki" />
-    <meta property="og:image" content="%VITE_OG_IMAGE%" />
+    <meta property="og:image" content="https://www.cmhe.ma/logo.png" />
     <meta
       property="og:image:alt"
       content="Logo du cabinet médical Dr Hasnaa El Malki"
@@ -52,7 +52,7 @@
       name="twitter:description"
       content="Consultations, échographie, diabétologie et ECG à Ait Melloul."
     />
-    <meta name="twitter:image" content="%VITE_OG_IMAGE%" />
+    <meta name="twitter:image" content="https://www.cmhe.ma/logo.png" />
     <meta name="twitter:image:alt" content="Logo du cabinet" />
     <title>Dr. Hasnaa El Malki - Médecin Généraliste</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,6 +61,42 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- JSON-LD Schema.org: Physician / LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. Hasnaa El Malki",
+        "url": "https://www.cmhe.ma/",
+        "image": "https://www.cmhe.ma/logo.png",
+        "telephone": "+212 (0) 5 28 24 11 19",
+        "email": "cmhe25@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Immeuble Damou, 1er étage, Av. Mohamed VI, Route de Biougra",
+          "addressLocality": "Ait Melloul",
+          "addressRegion": "Agadir",
+          "postalCode": "",
+          "addressCountry": "MA"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "priceRange": "€€",
+        "description": "Médecin généraliste spécialisée en échographie et diabétologie — consultations à Ait Melloul.",
+        "sameAs": [
+          "https://www.cmhe.ma/",
+          "https://www.facebook.com/",
+          "https://www.linkedin.com/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
