@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Facebook, Linkedin } from "lucide-react";
+
+const FACEBOOK_URL = "https://www.facebook.com/DrHasnaaElMalki";
+const LINKEDIN_URL =
+  "https://www.linkedin.com/company/cabinet-medical-dr-hasnaa-el-malki";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -121,6 +125,7 @@ const Navbar: React.FC = () => {
               </p>
             </div>
           </div>
+          <div className="flex items-center gap-3 sm:gap-4">
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
@@ -150,6 +155,26 @@ const Navbar: React.FC = () => {
               );
             })}
           </div>
+          <div className="flex items-center gap-1.5">
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Page Facebook du cabinet (nouvelle fenêtre)"
+              className="flex items-center justify-center w-9 h-9 rounded-full text-[#3790B4] hover:bg-[#3790B4] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4]"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Page LinkedIn du cabinet (nouvelle fenêtre)"
+              className="flex items-center justify-center w-9 h-9 rounded-full text-[#3790B4] hover:bg-[#3790B4] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4]"
+            >
+              <Linkedin size={18} />
+            </a>
+          </div>
           <button
             className="lg:hidden p-2 rounded-lg text-[#6F78B9] hover:bg-[#3790B4]/20 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4]"
             onClick={toggleMenu}
@@ -159,6 +184,7 @@ const Navbar: React.FC = () => {
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
+          </div>
         </nav>
 
         <div
