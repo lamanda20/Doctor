@@ -8,8 +8,14 @@ import {
   Clock,
   Shield,
   Award,
+  Facebook,
+  Linkedin,
 } from "lucide-react";
 import { services } from "../data/services";
+
+const FACEBOOK_URL = "https://www.facebook.com/DrHasnaaElMalki";
+const LINKEDIN_URL =
+  "https://www.linkedin.com/company/cabinet-medical-dr-hasnaa-el-malk";
 
 const navLinks = [
   { name: "Accueil", id: "accueil" },
@@ -58,6 +64,32 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2 text-[#3790B4] text-xs">
                 <Award size={18} /> <span>Ordre des Médecins</span>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-sm font-semibold mb-2 text-[#40338B]">
+                Suivez-nous
+              </h4>
+              <div className="flex items-center gap-3">
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Page Facebook du cabinet (nouvelle fenêtre)"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#3790B4]/10 text-[#3790B4] hover:bg-[#3790B4] hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4] focus-visible:ring-offset-2"
+                >
+                  <Facebook size={18} />
+                </a>
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Page LinkedIn du cabinet (nouvelle fenêtre)"
+                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[#3790B4]/10 text-[#3790B4] hover:bg-[#3790B4] hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3790B4] focus-visible:ring-offset-2"
+                >
+                  <Linkedin size={18} />
+                </a>
               </div>
             </div>
           </div>
