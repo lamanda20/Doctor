@@ -15,7 +15,7 @@ import { services } from "../data/services";
 
 const FACEBOOK_URL = "https://www.facebook.com/DrHasnaaElMalki";
 const LINKEDIN_URL =
-  "https://www.linkedin.com/company/cabinet-medical-dr-hasnaa-el-malk";
+  "https://www.linkedin.com/company/cabinet-medical-dr-hasnaa-el-malki";
 
 const navLinks = [
   { name: "Accueil", id: "accueil" },
