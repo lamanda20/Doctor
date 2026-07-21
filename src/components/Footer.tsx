@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Phone,
   Mail,
@@ -8,12 +9,32 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+import { services } from "../data/services";
+
+const navLinks = [
+  { name: "Accueil", id: "accueil" },
+  { name: "À Propos", id: "a-propos" },
+  { name: "Services", id: "services" },
+  { name: "Galerie", id: "gallery" },
+  { name: "Contact & Localisation", id: "location" },
+];
 
 const Footer: React.FC = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentYear = new Date().getFullYear();
+
+  // Robuste depuis n'importe quelle page : on rejoint l'accueil avec le hash
+  // (le défilement fluide est ensuite géré par ScrollToHash dans App).
+  const handleNavClick = (id: string) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", `#${id}`);
     }
   };
 
@@ -47,19 +68,13 @@ const Footer: React.FC = () => {
               Navigation
             </h4>
             <ul className="space-y-2">
-              {[
-                "accueil",
-                "a-propos",
-                "services",
-                "témoignages",
-                "contact",
-              ].map((section) => (
-                <li key={section}>
+              {navLinks.map((link) => (
+                <li key={link.id}>
                   <button
-                    onClick={() => scrollToSection(section)}
+                    onClick={() => handleNavClick(link.id)}
                     className="hover:text-[#3790B4] transition text-sm"
                   >
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    {link.name}
                   </button>
                 </li>
               ))}
@@ -72,12 +87,16 @@ const Footer: React.FC = () => {
               Services
             </h4>
             <ul className="space-y-1.5 text-xs text-[#6F78B9]">
-              <li>Consultation Générale</li>
-              <li>Suivi Médical</li>
-              <li>Pédiatrie</li>
-              <li>Médecine de Famille</li>
-              <li>Vaccinations</li>
-              <li>Certificats Médicaux</li>
+              {services.map((service) => (
+                <li key={service.id}>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="hover:text-[#3790B4] transition"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -126,7 +145,9 @@ const Footer: React.FC = () => {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-1 text-xs text-[#6F78B9]">
           <div className="space-y-0.5 text-center md:text-left">
-            <p>&copy; 2025 Dr. Hasnaa El Malki. Tous droits réservés.</p>
+            <p>
+              &copy; {currentYear} Dr. Hasnaa El Malki. Tous droits réservés.
+            </p>
           </div>
         </div>
       </div>

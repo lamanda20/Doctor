@@ -6,23 +6,33 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.cmhe.ma/a-propos</loc>
+    <loc>https://www.cmhe.ma/services/consultation-generale</loc>
     <lastmod>2026-01-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cmhe.ma/accueil</loc>
+    <loc>https://www.cmhe.ma/services/echographie</loc>
     <lastmod>2026-01-14</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cmhe.ma/contact</loc>
+    <loc>https://www.cmhe.ma/services/diabetologie</loc>
     <lastmod>2026-01-14</lastmod>
-    <priority>0.64</priority>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cmhe.ma/services</loc>
+    <loc>https://www.cmhe.ma/services/ecg</loc>
     <lastmod>2026-01-14</lastmod>
-    <priority>0.64</priority>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cmhe.ma/services/grossesse</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cmhe.ma/services/certificats</loc>
+    <lastmod>2026-01-14</lastmod>
+    <priority>0.80</priority>
   </url>
 </urlset>
